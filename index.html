@@ -241,6 +241,160 @@
  }
  .product-card:hover .product-cta { gap: 10px; }
 
+ /* ===== CNC SECTION ===== */
+ #cnc {
+ background: #0a1628;
+ position: relative;
+ overflow: hidden;
+ }
+ #cnc::before {
+ content: '';
+ position: absolute;
+ top: -100px; left: -100px;
+ width: 500px; height: 500px;
+ background: radial-gradient(circle, rgba(245,166,35,0.05), transparent 70%);
+ pointer-events: none;
+ }
+ .cnc-header {
+ text-align: center;
+ max-width: 800px;
+ margin: 0 auto 56px;
+ }
+ .cnc-header .section-tag { display: block; margin-bottom: 16px; }
+ .cnc-header h2 { color: #fff; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
+ .cnc-header p { color: #7a9ab8; font-size: 1.05rem; line-height: 1.75; }
+ .cnc-highlight {
+ background: rgba(245,166,35,0.08);
+ border: 1px solid rgba(245,166,35,0.2);
+ border-radius: 12px;
+ padding: 16px 24px;
+ margin-top: 20px;
+ display: inline-block;
+ }
+ .cnc-highlight span {
+ color: #f5a623;
+ font-weight: 700;
+ font-size: 0.88rem;
+ }
+ /* Capabilities grid */
+ .cnc-cap-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 20px;
+ max-width: 1100px;
+ margin: 0 auto 48px;
+ }
+ .cnc-cap-card {
+ background: rgba(255,255,255,0.04);
+ border: 1px solid rgba(255,255,255,0.07);
+ border-radius: 12px;
+ padding: 24px 20px;
+ text-align: center;
+ transition: all .3s;
+ }
+ .cnc-cap-card:hover {
+ background: rgba(245,166,35,0.08);
+ border-color: rgba(245,166,35,0.25);
+ transform: translateY(-4px);
+ }
+ .cnc-cap-icon { font-size: 2rem; margin-bottom: 12px; }
+ .cnc-cap-title { font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+ .cnc-cap-desc { font-size: 0.8rem; color: #6a8aaa; line-height: 1.5; }
+ /* Materials row */
+ .cnc-materials-row {
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ gap: 12px;
+ max-width: 900px;
+ margin: 0 auto 32px;
+ }
+ .mat-chip {
+ background: rgba(255,255,255,0.05);
+ border: 1px solid rgba(255,255,255,0.1);
+ color: #aac4e0;
+ padding: 7px 18px;
+ border-radius: 50px;
+ font-size: 0.82rem;
+ font-weight: 500;
+ transition: all .2s;
+ }
+ .mat-chip:hover {
+ background: rgba(245,166,35,0.12);
+ border-color: rgba(245,166,35,0.3);
+ color: #f5a623;
+ }
+ .cnc-divider {
+ max-width: 200px;
+ margin: 0 auto 32px;
+ text-align: center;
+ }
+ .cnc-divider hr {
+ border: none;
+ border-top: 1px solid rgba(245,166,35,0.2);
+ }
+ /* Post-processing row */
+ .cnc-post-label {
+ text-align: center;
+ font-size: 0.78rem;
+ font-weight: 700;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ color: rgba(245,166,35,0.7);
+ margin-bottom: 16px;
+ }
+ .cnc-post-row {
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ gap: 12px;
+ max-width: 900px;
+ margin: 0 auto 40px;
+ }
+ .post-chip {
+ background: rgba(10,111,181,0.15);
+ border: 1px solid rgba(10,111,181,0.3);
+ color: #60a5fa;
+ padding: 7px 18px;
+ border-radius: 50px;
+ font-size: 0.82rem;
+ font-weight: 600;
+ transition: all .2s;
+ }
+ .post-chip:hover {
+ background: rgba(10,111,181,0.25);
+ border-color: rgba(10,111,181,0.5);
+ }
+ /* CNC CTA */
+ .cnc-cta-row {
+ text-align: center;
+ margin-top: 12px;
+ }
+ .cnc-cta-row a {
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ background: linear-gradient(135deg,#f5a623,#e09510);
+ color: #0a1628;
+ padding: 14px 36px;
+ border-radius: 8px;
+ font-weight: 800;
+ font-size: 1rem;
+ box-shadow: 0 4px 20px rgba(245,166,35,0.4);
+ transition: all .2s;
+ text-decoration: none;
+ }
+ .cnc-cta-row a:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 8px 30px rgba(245,166,35,0.55);
+ }
+ .cnc-note {
+ text-align: center;
+ color: #4a6a8a;
+ font-size: 0.82rem;
+ margin-top: 14px;
+ }
+
  /* ===== FACTORY ADVANTAGE ===== */
  #factory {
  background: #0a1628;
@@ -576,6 +730,7 @@
  </div>
  <div class="nav-links">
  <a href="#products">Products</a>
+ <a href="#cnc">CNC Machining</a>
  <a href="#factory">Why Us</a>
  <a href="#process">Process</a>
  <a href="#certs">Certifications</a>
@@ -757,7 +912,104 @@
  </div>
  </div>
 
+ <div class="product-card">
+ <div class="product-img" style="background:linear-gradient(135deg,#1a2a4a,#0a3050);display:flex;align-items:center;justify-content:center;height:200px;">
+ <span style="font-size:4rem;">🔩</span>
  </div>
+ <div class="product-body">
+ <h3>CNC Precision Machining</h3>
+ <p>Custom CNC machined parts for automation, medical, robotics and 5-axis complex components. Materials: aluminum, stainless steel, copper, engineering plastics. Surface treatment available.</p>
+ <div class="product-meta">
+ <span class="meta-tag gold">MOQ: 1 pc</span>
+ <span class="meta-tag">±0.005mm Tolerance</span>
+ <span class="meta-tag">OEM/ODM</span>
+ </div>
+ <a href="#cnc" class="product-cta">View Capabilities <span>→</span></a>
+ </div>
+ </div>
+
+ </div>
+</section>
+
+<!-- ===== CNC PRECISION MACHINING ===== -->
+<section id="cnc">
+<div class="cnc-header">
+ <div class="section-tag">CNC Precision Machining</div>
+ <h2>CNC Precision Machining Services<br><span style="color:#f5a623;">Custom Parts · High Precision · Fast Delivery</span></h2>
+ <p>We specialize in precision CNC machining for industrial automation, medical devices, robotics, and complex 5-axis components. Accepting custom OEM/ODM orders from worldwide buyers — from single prototypes to mass production.</p>
+ <div class="cnc-highlight">
+ <span>🔧 Send Your Drawings — Free Technical Review Within 24h &nbsp;|&nbsp; 📦 Small Batch & Mass Production Available &nbsp;|&nbsp; 🌎 Long-Term Export Orders Welcome</span>
+ </div>
+</div>
+
+<!-- Capabilities grid -->
+<div class="cnc-cap-grid">
+ <div class="cnc-cap-card">
+ <div class="cnc-cap-icon">🔩</div>
+ <div class="cnc-cap-title">Automation Equipment Parts</div>
+ <div class="cnc-cap-desc">Custom shafts, gears, brackets, housings, and precision mechanical components for automation machinery.</div>
+ </div>
+ <div class="cnc-cap-card">
+ <div class="cnc-cap-icon">🏥</div>
+ <div class="cnc-cap-title">Medical Precision Parts</div>
+ <div class="cnc-cap-desc">ISO-certified workshop for medical device components with tight tolerances and biocompatible materials.</div>
+ </div>
+ <div class="cnc-cap-card">
+ <div class="cnc-cap-icon">🦾</div>
+ <div class="cnc-cap-title">Robot Structural Parts</div>
+ <div class="cnc-cap-desc">Robot arms, end-effectors, joints, frames, and structural components for industrial and collaborative robots.</div>
+ </div>
+ <div class="cnc-cap-card">
+ <div class="cnc-cap-icon">⚙️</div>
+ <div class="cnc-cap-title">5-Axis Complex Parts</div>
+ <div class="cnc-cap-desc">Complex geometry parts requiring 5-axis simultaneous machining. Tolerances up to ±0.005mm. Full CAD/CAM support.</div>
+ </div>
+ <div class="cnc-cap-card">
+ <div class="cnc-cap-icon">🔄</div>
+ <div class="cnc-cap-title">Turning-Milling Compound</div>
+ <div class="cnc-cap-desc">Combined CNC lathe + milling center for parts requiring both cylindrical turning and complex milling in one setup.</div>
+ </div>
+ <div class="cnc-cap-card">
+ <div class="cnc-cap-icon">📐</div>
+ <div class="cnc-cap-title">Custom OEM / ODM Orders</div>
+ <div class="cnc-cap-desc">Non-standard custom parts from drawings (PDF, DWG, STEP, IGES). Low MOQ. Prototype to high-volume production.</div>
+ </div>
+</div>
+
+<!-- Materials -->
+<div class="cnc-divider"><hr></div>
+<div class="cnc-post-label">Materials We Work With</div>
+<div class="cnc-materials-row">
+ <span class="mat-chip">Aluminum Alloy (6061, 7075)</span>
+ <span class="mat-chip">Stainless Steel (304, 316L)</span>
+ <span class="mat-chip">Carbon Steel</span>
+ <span class="mat-chip">Brass / Copper</span>
+ <span class="mat-chip">Engineering Plastics (PEEK, Delrin, Nylon)</span>
+ <span class="mat-chip">Titanium Alloy</span>
+ <span class="mat-chip">Tool Steel</span>
+ <span class="mat-chip">Cast Iron</span>
+</div>
+
+<!-- Post-processing -->
+<div class="cnc-divider"><hr></div>
+<div class="cnc-post-label">Surface Treatment & Post-Processing</div>
+<div class="cnc-post-row">
+ <span class="post-chip">Anodizing (Clear / Color)</span>
+ <span class="post-chip">Hard Oxidation</span>
+ <span class="post-chip">Sandblasting</span>
+ <span class="post-chip">Electroplating (Nickel, Chrome, Zinc)</span>
+ <span class="post-chip">Heat Treatment</span>
+ <span class="post-chip">Black Oxide Coating</span>
+ <span class="post-chip">Polishing</span>
+ <span class="post-chip">Laser Marking</span>
+ <span class="post-chip">Powder Coating</span>
+</div>
+
+<!-- CTA -->
+<div class="cnc-cta-row">
+ <a href="#contact">📨 Send Your Drawings — Get a Free Quote →</a>
+</div>
+<div class="cnc-note">Accepted file formats: PDF, DWG, STEP, IGES, STL, SolidWorks, AutoCAD &nbsp;|&nbsp; We sign NDA for all projects</div>
 </section>
 
 <!-- ===== FACTORY ADVANTAGE ===== -->
@@ -918,7 +1170,7 @@
  <div class="ci-icon-wrap">💬</div>
  <div class="ci-txt">
  <strong>WhatsApp / WeChat</strong>
- <span>+86 150 1460 2373</span>
+ <span>+86 XXX XXXX XXXX</span>
  </div>
  </div>
  <div class="ci-item">
