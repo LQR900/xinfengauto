@@ -22,10 +22,10 @@
  /* ===== NAV ===== */
  nav {
  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
- background: rgba(8, 20, 40, 0.96);
+ background: rgba(6, 14, 30, 0.98);
  backdrop-filter: blur(12px);
  -webkit-backdrop-filter: blur(12px);
- border-bottom: 1px solid rgba(245,166,35,0.15);
+ border-bottom: 1px solid rgba(245,166,35,0.3);
  display: flex; align-items: center; justify-content: space-between;
  padding: 0 5%; height: 68px;
  transition: all .3s;
@@ -41,12 +41,12 @@
  }
  .nav-logo span { color: #f5a623; }
  .nav-links { display: flex; align-items: center; gap: 32px; }
- .nav-links a { color: #d0dff0; font-size: 0.9rem; font-weight: 600; transition: color .2s; position: relative; text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
+ .nav-links a { color: #ffffff; font-size: 0.92rem; font-weight: 600; transition: all .2s; position: relative; letter-spacing: 0.3px; }
  .nav-links a::after {
  content:''; position:absolute; bottom:-4px; left:0; right:0; height:2px;
  background:#f5a623; transform:scaleX(0); transition:transform .2s;
  }
- .nav-links a:hover { color: #fff; }
+ .nav-links a:hover { color: #f5a623; }
  .nav-links a:hover::after { transform: scaleX(1); }
  .nav-cta {
  background: linear-gradient(135deg,#f5a623,#e09510);
