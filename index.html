@@ -59,25 +59,8 @@
  .nav-cta::after { display: none !important; }
  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(216,119,0,0.45) !important; }
 
- /* ===== DROPDOWN ===== */
- .nav-dropdown { position: relative; }
- .nav-dropdown > a { cursor: pointer; }
- .nav-dropdown-menu {
-  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-  background: #fff; border-radius: 8px; padding: 8px 0;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.12); min-width: 180px;
-  opacity: 0; visibility: hidden; transition: all .2s;
-  margin-top: 8px; z-index: 100;
- }
- .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; margin-top: 0; }
- .nav-dropdown-menu a {
-  display: block; padding: 10px 20px; color: #333; font-size: 0.88rem;
-  transition: all .15s; white-space: nowrap;
- }
- .nav-dropdown-menu a:hover { background: #f8f4ee; color: #d47700; }
- .nav-dropdown-menu a::after { display: none; }
-
- /* ===== HERO ===== */
+ 
+/* ===== HERO ===== */
  .hero {
  position: relative; min-height: 100vh;
  display: flex; align-items: center;
@@ -749,20 +732,17 @@
     SEN<span>Auto</span>
   </div>
   <div class="nav-links">
-    <a href="index.html" aria-current="page">Home</a>
-    <div class="nav-dropdown">
-      <a href="products-3d-printing.html">Products ▾</a>
-      <div class="nav-dropdown-menu">
-        <a href="products-3d-printing.html">3D Printing</a>
-        <a href="products-cnc.html">CNC Precision</a>
-      </div>
-    </div>
+    <a href="index.html">Home</a>
+    <a href="products-3d-printing.html">3D Printing</a>
+    <a href="products-cnc.html">CNC Precision</a>
     <a href="about.html">About Us</a>
     <a href="factory.html">Factory</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html" class="nav-cta">Contact Us</a>
   </div>
 </nav>
+
+
 
 <!-- ===== HERO ===== -->
 <section id="home" class="hero">
@@ -1414,5 +1394,18 @@
 </script>
 <!-- ============================================================ -->
 
+<script>
+// Auto-highlight current page in nav
+(function() {
+  var path = window.location.pathname.split('/')[].pop() || 'index.html';
+  var nav = document.querySelector('nav');
+  if (!nav) return;
+  var links = nav.querySelectorAll('a[href]');
+  for (var i = 0; i < links.length; i++) {
+    var href = links[i].getAttribute('href').split('/')[].pop();
+    if (href === path) { links[i].setAttribute('aria-current', 'page'); break; }
+  }
+})();
+</script>
 </body>
 </html>
