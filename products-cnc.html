@@ -720,15 +720,40 @@
     .nav-dropdown-menu a:hover { background: #f8f4ee; color: #d47700; }
     .nav-dropdown-menu a::after { display: none; }
     /* ===== CURRENT PAGE ===== */
-    .nav-links a[aria-current=`"page`"] { color: #d47700; }
-    .nav-links a[aria-current=`"page`"]::after { transform: scaleX(1); }
+    .nav-links a[aria-current="page"] { color: #d47700; }
+    .nav-links a[aria-current="page"]::after { transform: scaleX(1); }
 </style>
 body { background: #f9f9fb; }
-.page-hero {
-  position: relative; padding: 120px 5% 60px; text-align: center;
-  background: linear-gradient(135deg, #0d1b2a 0%, #1b2d45 100%);
-  color: #fff;
+
+
+/* ===== PAGE HERO BANNER ===== */
+.page-hero { position: relative; padding: 100px 5% 70px; text-align: center; background: linear-gradient(135deg, #0a1628 0%, #152238 50%, #1a3050 100%); color: #fff; overflow: hidden; }
+.page-hero::before {
+  content: ""; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(212,119,0,0.08) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none;
 }
+.page-hero-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+.hero-tag {
+  display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 2.5px;
+  color: #e89a25; text-transform: uppercase; margin-bottom: 18px;
+  padding: 6px 16px; border: 1px solid rgba(232,154,37,0.35); border-radius: 20px;
+  background: rgba(232,154,37,0.08);
+}
+.page-hero h1 {
+  font-size: 2.4rem; font-weight: 800; line-height: 1.25; margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+.hero-desc {
+  font-size: 1.05rem; line-height: 1.7; color: rgba(255,255,255,0.75); max-width: 650px;
+  margin: 0 auto 22px;
+}
+.breadcrumb {
+  font-size: 0.85rem; color: rgba(255,255,255,0.5);
+}
+.breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color .2s; }
+.breadcrumb a:hover { color: #e89a25; }
+
 .page-hero h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 12px; }
 .page-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; }
 .page-content { max-width: 1100px; margin: 0 auto; padding: 60px 5% 80px; }
@@ -755,8 +780,8 @@ body { background: #f9f9fb; }
     .nav-dropdown-menu a:hover { background: #f8f4ee; color: #d47700; }
     .nav-dropdown-menu a::after { display: none; }
     /* ===== CURRENT PAGE ===== */
-    .nav-links a[aria-current=`"page`"] { color: #d47700; }
-    .nav-links a[aria-current=`"page`"]::after { transform: scaleX(1); }
+    .nav-links a[aria-current="page"] { color: #d47700; }
+    .nav-links a[aria-current="page"]::after { transform: scaleX(1); }
 </style>
 </head>
 <body>
@@ -785,8 +810,12 @@ body { background: #f9f9fb; }
 
 
 <div class="page-hero">
-  <h1>CNC Precision Machining</h1>
-  <p>Custom parts with ±0.005mm tolerance</p>
+  <div class="page-hero-inner">
+    <span class="hero-tag">PRODUCT DETAILS</span>
+    <h1>CNC Precision Machining</h1>
+    <p class="hero-desc">Custom-engineered precision parts with ±0.005mm tolerance for automotive, aerospace, and electronics.</p>
+    <div class="breadcrumb">Home / Products / CNC Precision</div>
+  </div>
 </div>
 
 <div class="page-content">
