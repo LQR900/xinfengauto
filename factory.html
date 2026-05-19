@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
  <meta charset="UTF-8" />
@@ -697,7 +697,28 @@
  .footer-top { grid-template-columns: 1fr; }
  .footer-bottom { flex-direction: column; gap: 8px; }
  }
- </style>
+ 
+/* ===== DROPDOWN ===== */
+.nav-dropdown { position: relative; }
+.nav-dropdown > a { cursor: pointer; }
+.nav-dropdown-menu {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  background: #fff; border-radius: 8px; padding: 8px 0;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12); min-width: 180px;
+  opacity: 0; visibility: hidden; transition: all .2s;
+  margin-top: 8px; z-index: 100;
+}
+.nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; margin-top: 0; }
+.nav-dropdown-menu a {
+  display: block; padding: 10px 20px; color: #333; font-size: 0.88rem;
+  transition: all .15s; white-space: nowrap;
+}
+.nav-dropdown-menu a:hover { background: #f8f4ee; color: #d47700; }
+.nav-dropdown-menu a::after { display: none; }
+
+/* ===== CURRENT PAGE ===== */
+.nav-links a[aria-current="page"] { color: #d47700; }
+.nav-links a[aria-current="page"]::after { transform: scaleX(1); }</style>
 body { background: #f9f9fb; }
 .page-hero {
   position: relative; padding: 120px 5% 60px; text-align: center;
@@ -707,7 +728,28 @@ body { background: #f9f9fb; }
 .page-hero h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 12px; }
 .page-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; }
 .page-content { max-width: 1100px; margin: 0 auto; padding: 60px 5% 80px; }
- </style>
+ 
+/* ===== DROPDOWN ===== */
+.nav-dropdown { position: relative; }
+.nav-dropdown > a { cursor: pointer; }
+.nav-dropdown-menu {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  background: #fff; border-radius: 8px; padding: 8px 0;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12); min-width: 180px;
+  opacity: 0; visibility: hidden; transition: all .2s;
+  margin-top: 8px; z-index: 100;
+}
+.nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; margin-top: 0; }
+.nav-dropdown-menu a {
+  display: block; padding: 10px 20px; color: #333; font-size: 0.88rem;
+  transition: all .15s; white-space: nowrap;
+}
+.nav-dropdown-menu a:hover { background: #f8f4ee; color: #d47700; }
+.nav-dropdown-menu a::after { display: none; }
+
+/* ===== CURRENT PAGE ===== */
+.nav-links a[aria-current="page"] { color: #d47700; }
+.nav-links a[aria-current="page"]::after { transform: scaleX(1); }</style>
 </head>
 <body>
 <nav>
@@ -725,7 +767,7 @@ body { background: #f9f9fb; }
       </div>
     </div>
     <a href="about.html">About Us</a>
-    <a href="factory.html">Factory</a>
+    <a href="factory.html" aria-current="page">Factory</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html" class="nav-cta">Contact Us</a>
   </div>
