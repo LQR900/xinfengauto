@@ -700,6 +700,28 @@
  
 
 
+
+
+    /* ===== DROPDOWN ===== */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { cursor: pointer; }
+    .nav-dropdown-menu {
+      position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+      background: #fff; border-radius: 8px; padding: 8px 0;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12); min-width: 180px;
+      opacity: 0; visibility: hidden; transition: all .2s;
+      margin-top: 8px; z-index: 100;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; margin-top: 0; }
+    .nav-dropdown-menu a {
+      display: block; padding: 10px 20px; color: #333; font-size: 0.88rem;
+      transition: all .15s; white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #f8f4ee; color: #d47700; }
+    .nav-dropdown-menu a::after { display: none; }
+    /* ===== CURRENT PAGE ===== */
+    .nav-links a[aria-current=`"page`"] { color: #d47700; }
+    .nav-links a[aria-current=`"page`"]::after { transform: scaleX(1); }
 </style>
 body { background: #f9f9fb; }
 .page-hero {
@@ -713,6 +735,28 @@ body { background: #f9f9fb; }
  
 
 
+
+
+    /* ===== DROPDOWN ===== */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { cursor: pointer; }
+    .nav-dropdown-menu {
+      position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+      background: #fff; border-radius: 8px; padding: 8px 0;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12); min-width: 180px;
+      opacity: 0; visibility: hidden; transition: all .2s;
+      margin-top: 8px; z-index: 100;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; margin-top: 0; }
+    .nav-dropdown-menu a {
+      display: block; padding: 10px 20px; color: #333; font-size: 0.88rem;
+      transition: all .15s; white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { background: #f8f4ee; color: #d47700; }
+    .nav-dropdown-menu a::after { display: none; }
+    /* ===== CURRENT PAGE ===== */
+    .nav-links a[aria-current=`"page`"] { color: #d47700; }
+    .nav-links a[aria-current=`"page`"]::after { transform: scaleX(1); }
 </style>
 </head>
 <body>
@@ -723,14 +767,20 @@ body { background: #f9f9fb; }
   </div>
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="products-3d-printing.html">3D Printing</a>
-    <a href="products-cnc.html">CNC Precision</a>
+    <div class="nav-dropdown">
+      <a href="products-3d-printing.html">Products ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="products-3d-printing.html">3D Printing</a>
+        <a href="products-cnc.html">CNC Precision</a>
+      </div>
+    </div>
     <a href="about.html">About Us</a>
     <a href="factory.html">Factory</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html" class="nav-cta">Contact Us</a>
   </div>
 </nav>
+
 
 
 
@@ -906,31 +956,51 @@ body { background: #f9f9fb; }
 </script>
 <!-- ============================================================ -->
 
+
 <script>
 // Auto-highlight current page in nav
 (function() {
-  var path = window.location.pathname.split('/')[].pop() || 'index.html';
+  var path = window.location.pathname.split('/').pop() || 'index.html';
   var nav = document.querySelector('nav');
   if (!nav) return;
   var links = nav.querySelectorAll('a[href]');
+  var found = false;
   for (var i = 0; i < links.length; i++) {
-    var href = links[i].getAttribute('href').split('/')[].pop();
-    if (href === path) { links[i].setAttribute('aria-current', 'page'); break; }
+    var href = links[i].getAttribute('href').split('/').pop();
+    if (href === path) {
+      links[i].setAttribute('aria-current', 'page');
+      found = true;
+      break;
+    }
+  }
+  if (!found && (path === 'products-3d-printing.html' || path === 'products-cnc.html')) {
+    var trigger = nav.querySelector('.nav-dropdown > a');
+    if (trigger) trigger.setAttribute('aria-current', 'page');
   }
 })();
 </script>
 </body>
 </html>
+
 <script>
 // Auto-highlight current page in nav
 (function() {
-  var path = window.location.pathname.split('/')[].pop() || 'index.html';
+  var path = window.location.pathname.split('/').pop() || 'index.html';
   var nav = document.querySelector('nav');
   if (!nav) return;
   var links = nav.querySelectorAll('a[href]');
+  var found = false;
   for (var i = 0; i < links.length; i++) {
-    var href = links[i].getAttribute('href').split('/')[].pop();
-    if (href === path) { links[i].setAttribute('aria-current', 'page'); break; }
+    var href = links[i].getAttribute('href').split('/').pop();
+    if (href === path) {
+      links[i].setAttribute('aria-current', 'page');
+      found = true;
+      break;
+    }
+  }
+  if (!found && (path === 'products-3d-printing.html' || path === 'products-cnc.html')) {
+    var trigger = nav.querySelector('.nav-dropdown > a');
+    if (trigger) trigger.setAttribute('aria-current', 'page');
   }
 })();
 </script>
