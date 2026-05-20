@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
  <meta charset="UTF-8" />
@@ -90,7 +90,7 @@
  margin-bottom: 28px;
  animation: fadeInDown .6s ease both;
  }
- .hero-badge::before { content: '●'; font-size: 0.5rem; animation: pulse 1.5s infinite; }
+ .hero-badge::before { content: '��'; font-size: 0.5rem; animation: pulse 1.5s infinite; }
  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
  @keyframes fadeInDown { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
  @keyframes fadeInUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
@@ -202,8 +202,9 @@
  #products { background: #f5f7fa; }
  .products-grid {
  display: grid;
- grid-template-columns: repeat(3, 1fr);
- gap: 24px; max-width: 1200px; margin: 0 auto;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 24px; max-width: 900px; margin: 0 auto;
+ justify-content: center;
  }
  .product-card {
  background: #fff; border-radius: 10px;
@@ -733,97 +734,21 @@
 .nav-mobile-sub{color:rgba(255,255,255,0.5);font-size:0.9rem;padding:4px 32px;text-align:center}
 @media(max-width:640px){.nav-links{display:none!important}.nav-hamburger{display:flex!important}}
 
-/* ===== 4-Step Process New Style ===== */
-.process-steps-new {
- display: flex;
- align-items: flex-start;
- justify-content: center;
- gap: 0;
- max-width: 1200px;
- margin: 60px auto 0;
- padding: 0 20px;
-}
-.process-step-new {
- flex: 1;
- text-align: center;
- max-width: 260px;
-}
-.step-icon-wrap {
- width: 80px;
- height: 80px;
- margin: 0 auto 16px;
- background: #0a1628;
- border: 3px solid #e89a25;
- border-radius: 50%;
- display: flex;
- align-items: center;
- justify-content: center;
-}
-.step-icon {
- color: #fff;
-}
-.step-icon svg {
- width: 32px;
- height: 32px;
-}
-.step-label-new {
- font-size: 0.75rem;
- font-weight: 700;
- color: #e89a25;
- letter-spacing: 1px;
- margin-bottom: 8px;
-}
-.step-title {
- font-size: 1.1rem;
- font-weight: 700;
- color: #1a2a40;
- margin-bottom: 12px;
-}
-.step-desc {
- font-size: 0.9rem;
- color: #666;
- line-height: 1.7;
- padding: 0 10px;
-}
-.process-line {
- width: 60px;
- height: 3px;
- background: linear-gradient(90deg, #e89a25, #d47700);
- margin-top: 40px;
- flex-shrink: 0;
-}
-@media (max-width: 900px) {
- .process-steps-new {
- flex-wrap: wrap;
- gap: 30px;
- }
- .process-step-new {
- flex: 0 0 calc(50% - 20px);
- max-width: none;
- }
- .process-line {
- display: none;
- }
-}
-@media (max-width: 600px) {
- .process-step-new {
- flex: 0 0 100%;
- }
-}</style>
+</style>
 
  <!--
  ============================================================
-  EMAILJS 配置 — 请填写以下 3 个值
+  EMAILJS ���� �� ����д���� 3 ��ֵ
  ============================================================
-  1. 前往 https://www.emailjs.com 注册（免费）
-  2. 进入 Integration（集成）页面，复制你的 Public Key
-  3. 添加 Email Service（Gmail / QQ / 企业邮箱等）
-  4. 创建 Email Template（邮件模板），定义变量名
-  5. 把下面 3 个占位符替换成真实值：
+  1. ǰ�� https://www.emailjs.com ע�ᣨ��ѣ�
+  2. ���� Integration�����ɣ�ҳ�棬������� Public Key
+  3. ��� Email Service��Gmail / QQ / ��ҵ����ȣ�
+  4. ���� Email Template���ʼ�ģ�壩�����������
+  5. ������ 3 ��ռλ���滻����ʵֵ��
 
-  YOUR_EMAILJS_USER_ID       → 用户ID（Public Key）
-  YOUR_EMAILJS_SERVICE_ID    → 服务ID
-  YOUR_EMAILJS_TEMPLATE_ID   → 模板ID
+  YOUR_EMAILJS_USER_ID       �� �û�ID��Public Key��
+  YOUR_EMAILJS_SERVICE_ID    �� ����ID
+  YOUR_EMAILJS_TEMPLATE_ID   �� ģ��ID
  ============================================================
  -->
  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -840,13 +765,13 @@
 <!-- ===== NAV ===== -->
 <nav>
   <div class="nav-logo">
-    <div class="nav-logo-icon">⚙️</div>
+    <div class="nav-logo-icon">📋</div>
     SEN<span>Auto</span>
   </div>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <div class="nav-dropdown">
-      <a href="products-3d-printing.html">Products ▾</a>
+      <a href="products-3d-printing.html">Products ?</a>
       <div class="nav-dropdown-menu">
         <a href="products-3d-printing.html">3D Printing</a>
         <a href="products-cnc.html">CNC Precision</a>
@@ -869,19 +794,19 @@
  <div class="hero-bg"></div>
  <div class="hero-overlay"></div>
  <div class="hero-content">
- <div class="hero-badge">TRUSTED AUTOMATION MANUFACTURER · CHINA</div>
+ <div class="hero-badge">TRUSTED AUTOMATION MANUFACTURER �� CHINA</div>
  <h1>
  Smart Automation<br>
  <span class="highlight">Built for Global Industry</span>
  </h1>
  <p class="hero-sub">
  We manufacture <strong>packaging automation</strong>, <strong>assembly machines</strong>,
- <strong>3C dispensing</strong>, and <strong>lithium battery automation</strong> systems —
+ <strong>3C dispensing</strong>, and <strong>lithium battery automation</strong> systems ��
  factory direct, CE certified, shipped to 50+ countries worldwide.
  </p>
  <div class="hero-btns">
- <a href="#contact" class="btn-gold">🚀 Request Free Quote <span>→</span></a>
- <a href="#products" class="btn-outline">📦 View Products</a>
+ <a href="#contact" class="btn-gold">💡 Request Free Quote <span>��</span></a>
+ <a href="#products" class="btn-outline">⚙️ View Products</a>
  </div>
  <div class="hero-trust">
  <div class="trust-avatars">
@@ -930,14 +855,14 @@
   <div class="section-header">
     <div class="section-tag">Our Product Lines</div>
     <h2 class="section-title">3D Printing & CNC Precision Solutions</h2>
-    <p class="section-sub">From rapid prototyping to mass production — engineered for speed, precision, and global delivery.</p>
+    <p class="section-sub">From rapid prototyping to mass production �� engineered for speed, precision, and global delivery.</p>
   </div>
   <div class="products-grid">
 
     <!-- 3D Printing Equipment -->
-    <div class="product-card">
+    <div class="product-card" onclick="window.location.href='products-3d-printing.html'" style="cursor: pointer;">
       <div class="product-img">
-        <img src="https://raw.githubusercontent.com/LQR900/xinfengauto/main/Image2/3d-printing-machine.jpg" alt="3D Printing Machine" loading="lazy" />
+        <a href="products-3d-printing.html"><img src="https://raw.githubusercontent.com/LQR900/xinfengauto/main/Image2/3d-printing-machine.jpg" alt="3D Printing Machine" loading="lazy" /></a>
         <div class="product-img-overlay"></div>
         <div class="product-badge">HOT</div>
       </div>
@@ -949,26 +874,26 @@
           <span class="meta-tag">24h Fast Turnaround</span>
           <span class="meta-tag">STL / STEP Accepted</span>
         </div>
-        <a href="#contact" class="product-cta">Get Quote <span>→</span></a>
+        <a href="#contact" class="product-cta">Get Quote <span>��</span></a>
       </div>
     </div>
 
     <!-- CNC Precision Machining -->
-    <div class="product-card">
+    <div class="product-card" onclick="window.location.href='products-cnc.html'" style="cursor: pointer;">
       <div class="product-img">
-        <img src="https://raw.githubusercontent.com/LQR900/xinfengauto/main/Image2/cnc-milling-parts.jpg" alt="CNC Precision Machining" loading="lazy" />
+        <a href="products-cnc.html"><img src="https://raw.githubusercontent.com/LQR900/xinfengauto/main/Image2/cnc-milling-parts.jpg" alt="CNC Precision Machining" loading="lazy" /></a>
         <div class="product-img-overlay"></div>
         <div class="product-badge">PRECISION</div>
       </div>
       <div class="product-body">
         <h3>CNC Precision Machining</h3>
-        <p>Custom CNC machined parts with 5-axis capability. Automation equipment parts, medical accessories, robot structures. Tolerances up to ±0.01mm.</p>
+        <p>Custom CNC machined parts with 5-axis capability. Automation equipment parts, medical accessories, robot structures. Tolerances up to ��0.01mm.</p>
         <div class="product-meta">
           <span class="meta-tag gold">MOQ: 1PCS</span>
-          <span class="meta-tag">±0.01mm Tolerance</span>
+          <span class="meta-tag">��0.01mm Tolerance</span>
           <span class="meta-tag">OEM/ODM</span>
         </div>
-        <a href="#cnc" class="product-cta">View Capabilities <span>→</span></a>
+        <a href="#cnc" class="product-cta">View Capabilities <span>��</span></a>
       </div>
     </div>
 
@@ -1009,42 +934,42 @@
 <section id="cnc">
 <div class="cnc-header">
  <div class="section-tag">CNC Precision Machining</div>
- <h2>CNC Precision Machining Services<br><span style="color:#f5a623;">Custom Parts · High Precision · Fast Delivery</span></h2>
- <p>We specialize in precision CNC machining for industrial automation, medical devices, robotics, and complex 5-axis components. Accepting custom OEM/ODM orders from worldwide buyers — from single prototypes to mass production.</p>
+ <h2>CNC Precision Machining Services<br><span style="color:#f5a623;">Custom Parts �� High Precision �� Fast Delivery</span></h2>
+ <p>We specialize in precision CNC machining for industrial automation, medical devices, robotics, and complex 5-axis components. Accepting custom OEM/ODM orders from worldwide buyers �� from single prototypes to mass production.</p>
  <div class="cnc-highlight">
- <span>🔧 Send Your Drawings — Free Technical Review Within 24h &nbsp;|&nbsp; 📦 Small Batch & Mass Production Available &nbsp;|&nbsp; 🌎 Long-Term Export Orders Welcome</span>
+ <span>🚢 Send Your Drawings �� Free Technical Review Within 24h &nbsp;|&nbsp; ?? Small Batch & Mass Production Available &nbsp;|&nbsp; ?? Long-Term Export Orders Welcome</span>
  </div>
 </div>
 
 <!-- Capabilities grid -->
 <div class="cnc-cap-grid">
  <div class="cnc-cap-card">
- <div class="cnc-cap-icon">🔩</div>
+ <div class="cnc-cap-icon">??</div>
  <div class="cnc-cap-title">Automation Equipment Parts</div>
  <div class="cnc-cap-desc">Custom shafts, gears, brackets, housings, and precision mechanical components for automation machinery.</div>
  </div>
  <div class="cnc-cap-card">
- <div class="cnc-cap-icon">🏥</div>
+ <div class="cnc-cap-icon">??</div>
  <div class="cnc-cap-title">Medical Precision Parts</div>
  <div class="cnc-cap-desc">ISO-certified workshop for medical device components with tight tolerances and biocompatible materials.</div>
  </div>
  <div class="cnc-cap-card">
- <div class="cnc-cap-icon">🦾</div>
+ <div class="cnc-cap-icon">??</div>
  <div class="cnc-cap-title">Robot Structural Parts</div>
  <div class="cnc-cap-desc">Robot arms, end-effectors, joints, frames, and structural components for industrial and collaborative robots.</div>
  </div>
  <div class="cnc-cap-card">
- <div class="cnc-cap-icon">⚙️</div>
+ <div class="cnc-cap-icon">??</div>
  <div class="cnc-cap-title">5-Axis Complex Parts</div>
- <div class="cnc-cap-desc">Complex geometry parts requiring 5-axis simultaneous machining. Tolerances up to ±0.01mm. Full CAD/CAM support.</div>
+ <div class="cnc-cap-desc">Complex geometry parts requiring 5-axis simultaneous machining. Tolerances up to ��0.01mm. Full CAD/CAM support.</div>
  </div>
  <div class="cnc-cap-card">
- <div class="cnc-cap-icon">🔄</div>
+ <div class="cnc-cap-icon">??</div>
  <div class="cnc-cap-title">Turning-Milling Compound</div>
  <div class="cnc-cap-desc">Combined CNC lathe + milling center for parts requiring both cylindrical turning and complex milling in one setup.</div>
  </div>
  <div class="cnc-cap-card">
- <div class="cnc-cap-icon">📐</div>
+ <div class="cnc-cap-icon">??</div>
  <div class="cnc-cap-title">Custom OEM / ODM Orders</div>
  <div class="cnc-cap-desc">Non-standard custom parts from drawings (PDF, DWG, STEP, IGES). Low MOQ. Prototype to high-volume production.</div>
  </div>
@@ -1081,7 +1006,7 @@
 
 <!-- CTA -->
 <div class="cnc-cta-row">
- <a href="#contact">📨 Send Your Drawings — Get a Free Quote →</a>
+ <a href="#contact">?? Send Your Drawings �� Get a Free Quote ��</a>
 </div>
 <div class="cnc-note">Accepted file formats: PDF, DWG, STEP, IGES, STL, SolidWorks, AutoCAD &nbsp;|&nbsp; We sign NDA for all projects</div>
 </section>
@@ -1094,7 +1019,7 @@
  <div class="factory-img-overlay"></div>
  <div class="factory-img-badge">
  <strong>Our Manufacturing Base</strong>
- <p>50,000m² production facility · 300+ skilled engineers · ISO 9001 certified</p>
+ <p>50,000m2 production facility �� 300+ skilled engineers �� ISO 9001 certified</p>
  </div>
  </div>
  <div class="factory-content">
@@ -1103,28 +1028,28 @@
  <p class="section-sub">15 years of precision manufacturing experience, combined with a vertically integrated supply chain, gives us unmatched quality and speed.</p>
  <div class="advantage-list">
  <div class="advantage-item">
- <div class="adv-icon">🏭</div>
+ <div class="adv-icon">??</div>
  <div class="adv-text">
- <h4>Factory Direct — Zero Middlemen</h4>
+ <h4>Factory Direct �� Zero Middlemen</h4>
  <p>Buy direct from the manufacturer. No trading company markups. Full factory audit, NDA, and OEM/ODM support available.</p>
  </div>
  </div>
  <div class="advantage-item">
- <div class="adv-icon">🎯</div>
+ <div class="adv-icon">??</div>
  <div class="adv-text">
  <h4>Full Custom Engineering</h4>
  <p>Every machine is engineered for your specific product, production speed, and floor layout. We don't sell off-the-shelf only.</p>
  </div>
  </div>
  <div class="advantage-item">
- <div class="adv-icon">✅</div>
+ <div class="adv-icon">?</div>
  <div class="adv-text">
- <h4>CE · ISO 9001 · RoHS Certified</h4>
+ <h4>CE �� ISO 9001 �� RoHS Certified</h4>
  <p>All machines comply with international safety and quality standards for smooth customs clearance in the US, EU, and beyond.</p>
  </div>
  </div>
  <div class="advantage-item">
- <div class="adv-icon">🌍</div>
+ <div class="adv-icon">??</div>
  <div class="adv-text">
  <h4>Global Delivery & Support</h4>
  <p>In-house export team handles all documentation, crating, and freight. English-speaking engineers provide remote commissioning.</p>
@@ -1140,43 +1065,32 @@
  <div class="section-header">
  <div class="section-tag">How We Work</div>
  <h2 class="section-title">4-Step Simple Process</h2>
- <p class="section-sub">From your first message to machine running on your factory floor — we make it straightforward, transparent, and stress-free.</p>
+ <p class="section-sub">From your first message to machine running on your factory floor �� we make it straightforward, transparent, and stress-free.</p>
  </div>
- <div class="process-steps-new">
- <div class="process-step-new">
- <div class="step-icon-wrap">
- <div class="step-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg></div>
+ <div class="process-steps">
+ <div class="process-step">
+ <div class="step-num">📋</div>
+ <div class="step-label">Step 01</div>
+ <h4>Send Inquiry</h4>
+ <p>Share your production requirements, product specs, and capacity needs via our form or WhatsApp.</p>
  </div>
- <div class="step-label-new">STEP 01</div>
- <h4 class="step-title">Send Inquiry</h4>
- <p class="step-desc">Share your production requirements, product specs, and capacity needs via our form or WhatsApp.</p>
+ <div class="process-step">
+ <div class="step-num">💡</div>
+ <div class="step-label">Step 02</div>
+ <h4>Free Consultation</h4>
+ <p>Our engineers analyze your needs and provide a tailored solution proposal with pricing within 24 hours.</p>
  </div>
- <div class="process-line"></div>
- <div class="process-step-new">
- <div class="step-icon-wrap">
- <div class="step-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/></svg></div>
+ <div class="process-step">
+ <div class="step-num">⚙️</div>
+ <div class="step-label">Step 03</div>
+ <h4>Manufacturing</h4>
+ <p>We build, test, and video-inspect your machine. You can visit our factory or request live video verification.</p>
  </div>
- <div class="step-label-new">STEP 02</div>
- <h4 class="step-title">Free Consultation</h4>
- <p class="step-desc">Our engineers analyze your needs and provide a tailored solution proposal with pricing within 24 hours.</p>
- </div>
- <div class="process-line"></div>
- <div class="process-step-new">
- <div class="step-icon-wrap">
- <div class="step-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L5.09 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></div>
- </div>
- <div class="step-label-new">STEP 03</div>
- <h4 class="step-title">Manufacturing</h4>
- <p class="step-desc">We build, test, and video-inspect your machine. You can visit our factory or request live video verification.</p>
- </div>
- <div class="process-line"></div>
- <div class="process-step-new">
- <div class="step-icon-wrap">
- <div class="step-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M19.5 3h-15C3.67 3 3 3.67 3 4.5v15c0 .83.67 1.5 1.5 1.5h15c.83 0 1.5-.67 1.5-1.5v-15c0-.83-.67-1.5-1.5-1.5zM10 16.5v-9l6 4.5-6 4.5z"/></svg></div>
- </div>
- <div class="step-label-new">STEP 04</div>
- <h4 class="step-title">Delivery & Support</h4>
- <p class="step-desc">We handle shipping and customs docs. Our engineers assist with installation, commissioning, and operator training.</p>
+ <div class="process-step">
+ <div class="step-num">🚢</div>
+ <div class="step-label">Step 04</div>
+ <h4>Delivery & Support</h4>
+ <p>We handle shipping and customs docs. Our engineers assist with installation, commissioning, and operator training.</p>
  </div>
  </div>
 </section>
@@ -1186,31 +1100,31 @@
  <div class="section-header">
  <div class="section-tag">Quality & Compliance</div>
  <h2 class="section-title">Internationally Certified</h2>
- <p class="section-sub">Our machines meet rigorous international standards — ensuring smooth import and full compliance in your target market.</p>
+ <p class="section-sub">Our machines meet rigorous international standards �� ensuring smooth import and full compliance in your target market.</p>
  </div>
  <div class="certs-row">
  <div class="cert-card">
- <div class="cert-icon">🇪🇺</div>
+ <div class="cert-icon">????</div>
  <strong>CE</strong>
  <small>European Conformity</small>
  </div>
  <div class="cert-card">
- <div class="cert-icon">📋</div>
+ <div class="cert-icon">??</div>
  <strong>ISO 9001</strong>
  <small>Quality Management</small>
  </div>
  <div class="cert-card">
- <div class="cert-icon">🛡️</div>
+ <div class="cert-icon">???</div>
  <strong>RoHS</strong>
  <small>Hazardous Substances</small>
  </div>
  <div class="cert-card">
- <div class="cert-icon">🌿</div>
+ <div class="cert-icon">??</div>
  <strong>ISO 14001</strong>
  <small>Environmental Mgmt</small>
  </div>
  <div class="cert-card">
- <div class="cert-icon">⚡</div>
+ <div class="cert-icon">?</div>
  <strong>SGS</strong>
  <small>Third-Party Tested</small>
  </div>
@@ -1221,16 +1135,16 @@
  <h2 class="section-title" style="font-size:1.5rem;">Clients in 50+ Countries</h2>
  </div>
  <div class="markets-row">
- <span class="market-pill">🇺🇸 United States</span>
- <span class="market-pill">🇨🇦 Canada</span>
- <span class="market-pill">🇩🇪 Germany</span>
- <span class="market-pill">🇬🇧 United Kingdom</span>
- <span class="market-pill">🇫🇷 France</span>
- <span class="market-pill">🇯🇵 Japan</span>
- <span class="market-pill">🇰🇷 South Korea</span>
- <span class="market-pill">🇮🇳 India</span>
- <span class="market-pill">🇸🇬 Southeast Asia</span>
- <span class="market-pill">🇦🇺 Australia</span>
+ <span class="market-pill">???? United States</span>
+ <span class="market-pill">???? Canada</span>
+ <span class="market-pill">???? Germany</span>
+ <span class="market-pill">???? United Kingdom</span>
+ <span class="market-pill">???? France</span>
+ <span class="market-pill">???? Japan</span>
+ <span class="market-pill">???? South Korea</span>
+ <span class="market-pill">???? India</span>
+ <span class="market-pill">???? Southeast Asia</span>
+ <span class="market-pill">???? Australia</span>
  </div>
 </section>
 
@@ -1244,16 +1158,16 @@
   <div class="blog-grid" style="max-width:1100px;margin:0 auto;padding:0 5% 60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
     <a href="#contact" style="text-decoration:none;color:inherit;">
       <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:transform .2s;">
-        <div style="height:160px;background:linear-gradient(135deg,#f8f9fa,#e9ecef);display:flex;align-items:center;justify-content:center;font-size:2.5rem;">📐</div>
+        <div style="height:160px;background:linear-gradient(135deg,#f8f9fa,#e9ecef);display:flex;align-items:center;justify-content:center;font-size:2.5rem;">??</div>
         <div style="padding:20px;">
           <h3 style="font-size:1rem;margin-bottom:8px;color:#1a2a40;">CNC Machining Tolerances Guide</h3>
-          <p style="font-size:0.85rem;color:#888;line-height:1.6;">Understanding tolerances in precision machining — what matters most for your project.</p>
+          <p style="font-size:0.85rem;color:#888;line-height:1.6;">Understanding tolerances in precision machining �� what matters most for your project.</p>
         </div>
       </div>
     </a>
     <a href="#contact" style="text-decoration:none;color:inherit;">
       <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:transform .2s;">
-        <div style="height:160px;background:linear-gradient(135deg,#f8f9fa,#e9ecef);display:flex;align-items:center;justify-content:center;font-size:2.5rem;">🖨️</div>
+        <div style="height:160px;background:linear-gradient(135deg,#f8f9fa,#e9ecef);display:flex;align-items:center;justify-content:center;font-size:2.5rem;">???</div>
         <div style="padding:20px;">
           <h3 style="font-size:1rem;margin-bottom:8px;color:#1a2a40;">3D Printing vs CNC: Which to Choose?</h3>
           <p style="font-size:0.85rem;color:#888;line-height:1.6;">A practical comparison to help you pick the right manufacturing method for your needs.</p>
@@ -1262,7 +1176,7 @@
     </a>
     <a href="#contact" style="text-decoration:none;color:inherit;">
       <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:transform .2s;">
-        <div style="height:160px;background:linear-gradient(135deg,#f8f9fa,#e9ecef);display:flex;align-items:center;justify-content:center;font-size:2.5rem;">🌍</div>
+        <div style="height:160px;background:linear-gradient(135deg,#f8f9fa,#e9ecef);display:flex;align-items:center;justify-content:center;font-size:2.5rem;">??</div>
         <div style="padding:20px;">
           <h3 style="font-size:1rem;margin-bottom:8px;color:#1a2a40;">Shipping from China: What You Need to Know</h3>
           <p style="font-size:0.85rem;color:#888;line-height:1.6;">Tips on shipping methods, customs, and delivery timelines for international orders.</p>
@@ -1285,43 +1199,43 @@
  <div class="contact-info-box">
  <h3>Contact Us Directly</h3>
  <div class="ci-item">
- <div class="ci-icon-wrap">📧</div>
+ <div class="ci-icon-wrap">??</div>
  <div class="ci-txt">
  <strong>Email</strong>
  <span>serasmith293@gmail.com</span>
  </div>
  </div>
  <div class="ci-item">
- <div class="ci-icon-wrap">💬</div>
+ <div class="ci-icon-wrap">??</div>
  <div class="ci-txt">
  <strong>WhatsApp / WeChat</strong>
  <span>+86 15014602373</span>
  </div>
  </div>
  <div class="ci-item">
- <div class="ci-icon-wrap">🕐</div>
+ <div class="ci-icon-wrap">??</div>
  <div class="ci-txt">
  <strong>Response Time</strong>
- <span>Within 24 hours · Mon–Sat</span>
+ <span>Within 24 hours �� Mon�CSat</span>
  </div>
  </div>
  <div class="ci-item">
- <div class="ci-icon-wrap">🏭</div>
+ <div class="ci-icon-wrap">??</div>
  <div class="ci-txt">
  <strong>Factory Location</strong>
  <span>Guangdong Province, China</span>
  </div>
  </div>
  <a href="https://wa.me/8615014602373" class="whatsapp-btn" target="_blank">
- 💬 Chat on WhatsApp Now
+ ?? Chat on WhatsApp Now
  </a>
  </div>
 
  <!-- ============================================================ -->
- <!-- 询盘表单 — 使用 EmailJS 发送，勿删勿改结构 -->
+ <!-- ѯ�̱�� �� ʹ�� EmailJS ���ͣ���ɾ��Ľṹ -->
  <!-- ============================================================ -->
  <div class="form-box" id="formBox">
- <h3>📋 Send Your Inquiry</h3>
+ <h3>?? Send Your Inquiry</h3>
  <p>Fill in your details and we'll get back to you with a tailored quote.</p>
 
  <form id="inquiryForm">
@@ -1384,16 +1298,16 @@
  <label>Your Requirements *</label>
  <textarea name="message" placeholder="Please describe your production process, product dimensions, required output per hour, and any special requirements..." required></textarea>
  </div>
- <button type="submit" class="form-submit" id="submitBtn">🚀 Send Inquiry — Get Reply Within 24 Hours</button>
- <p class="form-note">🔒 Your information is kept strictly confidential. We never share your data.</p>
+ <button type="submit" class="form-submit" id="submitBtn">?? Send Inquiry �� Get Reply Within 24 Hours</button>
+ <p class="form-note">?? Your information is kept strictly confidential. We never share your data.</p>
  </form>
 
- <!-- 发送成功后的提示（保持原有排版，不跳转页面）-->
+ <!-- ���ͳɹ������ʾ������ԭ���Ű棬����תҳ�棩-->
  <div class="form-success" id="formSuccess">
- <div class="form-success-icon">✅</div>
+ <div class="form-success-icon">?</div>
  <h4>Inquiry Sent Successfully!</h4>
  <p>Thank you for your message. Our team will review your requirements and get back to you within <strong>24 hours</strong>.</p>
- <p style="margin-top:12px;">📧 A confirmation has been sent to your email address.</p>
+ <p style="margin-top:12px;">?? A confirmation has been sent to your email address.</p>
  <button onclick="resetForm()" class="form-submit" style="margin-top:24px;">Send Another Inquiry</button>
  </div>
  </div>
@@ -1407,15 +1321,15 @@
  <div class="footer-top">
  <div class="footer-brand">
  <div class="nav-logo" style="margin-bottom:16px;">
- <div class="nav-logo-icon">⚙️</div>
+ <div class="nav-logo-icon">??</div>
  SEN<span style="color:#f5a623;">Auto</span>
  </div>
  <p>Professional automation equipment manufacturer with 15 years of experience. Factory direct pricing, CE certified, serving clients in 50+ countries.</p>
  <div class="footer-social">
  <a href="#" class="social-icon">in</a>
- <a href="#" class="social-icon">🐦</a>
- <a href="#" class="social-icon">▶</a>
- <a href="#" class="social-icon">📧</a>
+ <a href="#" class="social-icon">??</a>
+ <a href="#" class="social-icon">?</a>
+ <a href="#" class="social-icon">??</a>
  </div>
  </div>
  <div class="footer-col">
@@ -1450,23 +1364,23 @@
  </div>
  </div>
  <div class="footer-bottom">
- <span>© 2026 SEN Automation Equipment Co., Ltd. All rights reserved.</span>
- <span>Factory Direct · CE Certified · 50+ Countries Served</span>
+ <span>? 2026 SEN Automation Equipment Co., Ltd. All rights reserved.</span>
+ <span>Factory Direct �� CE Certified �� 50+ Countries Served</span>
  </div>
 </footer>
 
 <!-- ===== FLOATING BUTTON ===== -->
 <a href="#contact" class="float-btn">
- <span>💬 Get Free Quote</span>
- <span class="float-arrow">↓</span>
+ <span>?? Get Free Quote</span>
+ <span class="float-arrow">��</span>
 </a>
 
 <!-- ============================================================ -->
-<!-- EmailJS 发送脚本 — 表单提交逻辑 -->
+<!-- EmailJS ���ͽű� �� ����ύ�߼� -->
 <!-- ============================================================ -->
 <script>
 (function() {
- // 初始化 EmailJS（请替换上方的 3 个配置值）
+ // ��ʼ�� EmailJS�����滻�Ϸ��� 3 ������ֵ��
  emailjs.init(EMAILJS_CONFIG.USER_ID);
 
  const form = document.getElementById('inquiryForm');
@@ -1477,11 +1391,11 @@
  form.addEventListener('submit', function(e) {
  e.preventDefault();
 
- // 禁用按钮，显示加载状态
+ // ���ð�ť����ʾ����״̬
  submitBtn.disabled = true;
- submitBtn.textContent = '⏳ Sending...';
+ submitBtn.textContent = '? Sending...';
 
- // 收集表单数据
+ // �ռ��������
  const formData = {
  name: form.name.value,
  company: form.company.value,
@@ -1493,33 +1407,33 @@
  message: form.message.value
  };
 
- // 通过 EmailJS 发送邮件
+ // ͨ�� EmailJS �����ʼ�
  emailjs.send(
  EMAILJS_CONFIG.SERVICE_ID,
  EMAILJS_CONFIG.TEMPLATE_ID,
  formData
  )
  .then(function() {
- // 发送成功：隐藏表单，显示成功提示
+ // ���ͳɹ������ر������ʾ�ɹ���ʾ
  formContent.style.display = 'none';
  formSuccess.classList.add('show');
  })
  .catch(function(error) {
- // 发送失败：恢复按钮，给出提示
+ // ����ʧ�ܣ��ָ���ť��������ʾ
  submitBtn.disabled = false;
- submitBtn.textContent = '🚀 Send Inquiry — Get Reply Within 24 Hours';
- alert('❌ Failed to send your inquiry. Please try again or email us directly at serasmith293@gmail.com');
+ submitBtn.textContent = '?? Send Inquiry �� Get Reply Within 24 Hours';
+ alert('? Failed to send your inquiry. Please try again or email us directly at serasmith293@gmail.com');
  console.error('EmailJS Error:', error);
  });
  });
 
- // 重置表单（再次发送）
+ // ���ñ�����ٴη��ͣ�
  window.resetForm = function() {
  form.reset();
  formContent.style.display = 'block';
  formSuccess.classList.remove('show');
  submitBtn.disabled = false;
- submitBtn.textContent = '🚀 Send Inquiry — Get Reply Within 24 Hours';
+ submitBtn.textContent = '?? Send Inquiry �� Get Reply Within 24 Hours';
  };
 })();
 </script>
