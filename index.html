@@ -1,1491 +1,3107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SEN Automation | CNC Machining & 3D Printing Precision Parts</title>
-<meta name="description" content="Professional CNC precision machining and 3D printing services. Custom 5-axis parts, rapid prototyping, OEM/ODM for automation, medical & robotics. Fast delivery, global shipping.">
- <meta name="keywords" content="CNC machining, precision parts, automation equipment, 5-axis machining, OEM manufacturer, China factory, medical parts, robot parts">
- <style>
- /* ===== RESET & BASE ===== */
- *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
- html { scroll-behavior: smooth; font-size: 16px; }
- body { font-family: 'Segoe UI', Arial, sans-serif; color: #1a2332; background: #fff; overflow-x: hidden; }
- a { text-decoration: none; color: inherit; }
- img { max-width: 100%; display: block; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SolidForm Manufacturing – Expert in 3D Printing + CNC Machining hybrid solutions. From rapid prototype to mass production. Upload your CAD for a quote within 24h." />
+  <meta name="keywords" content="3D printing service, CNC machining, hybrid manufacturing, SLA SLS SLM, 5-axis CNC, rapid prototype, low-volume production" />
+  <title>SolidForm Manufacturing – 3D Printing + CNC Machining Solutions</title>
 
- /* ===== CUSTOM SCROLLBAR ===== */
- ::-webkit-scrollbar { width: 6px; }
- ::-webkit-scrollbar-track { background: #0a1628; }
- ::-webkit-scrollbar-thumb { background: #f5a623; border-radius: 3px; }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
 
- /* ===== NAV ===== */
- nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  background: rgba(255,255,255,0.97);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 40px; height: 68px;
-  transition: all .3s;
-  box-shadow: 0 1px 20px rgba(0,0,0,0.06);
- }
- .nav-logo {
-  display: flex; align-items: center; gap: 10px;
-  color: #1a2a40; font-size: 1.35rem; font-weight: 800; letter-spacing: 1px;
- }
- .nav-logo-icon {
-  width: 36px; height: 36px; background: linear-gradient(135deg,#e89a25,#d47700);
-  border-radius: 6px; display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem;
- }
- .nav-logo span { color: #d47700; }
- .nav-links { display: flex; align-items: center; gap: 28px; margin-left: auto; }
- .nav-links a { color: #333333; font-size: 0.92rem; font-weight: 500; transition: all .2s; position: relative; letter-spacing: 0.2px; }
- .nav-links a::after {
- content:''; position:absolute; bottom:-4px; left:0; right:0; height:2px;
- background:#e89a25; transform:scaleX(0); transition:transform .2s;
- }
- .nav-links a:hover { color: #d47700; }
- .nav-links a:hover::after { transform: scaleX(1); }
- .nav-cta {
-  background: linear-gradient(135deg,#e89a25,#d47700);
-  color: #ffffff !important; padding: 10px 24px; border-radius: 6px;
-  font-weight: 700 !important; font-size: 0.88rem !important;
-  box-shadow: 0 3px 14px rgba(216,119,0,0.3);
-  transition: transform .15s, box-shadow .15s !important;
- }
- .nav-cta::after { display: none !important; }
- .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(216,119,0,0.45) !important; }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
- 
-/* ===== HERO ===== */
- .hero {
- position: relative; min-height: 100vh;
- display: flex; align-items: center;
- overflow: hidden;
- }
- .hero-bg {
- position: absolute; inset: 0;
- background-image: url('https://raw.githubusercontent.com/LQR900/xinfengauto/main/Image2/hero-bg.jpg');
- background-size: cover; background-position: center;
- filter: brightness(0.70);
- }
- .hero-overlay {
- position: absolute; inset: 0;
- background: linear-gradient(105deg, rgba(5,15,35,0.92) 0%, rgba(5,15,35,0.6) 55%, rgba(5,15,35,0.2) 100%);
- }
- .hero-content {
- position: relative; z-index: 2;
- padding: 120px 6% 80px;
- max-width: 780px;
- }
- .hero-badge {
- display: inline-flex; align-items: center; gap: 8px;
- background: rgba(245,166,35,0.15);
- border: 1px solid rgba(245,166,35,0.5);
- color: #f5a623; padding: 6px 18px; border-radius: 20px;
- font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
- margin-bottom: 28px;
- animation: fadeInDown .6s ease both;
- }
- .hero-badge::before { content: '●'; font-size: 0.5rem; animation: pulse 1.5s infinite; }
- @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
- @keyframes fadeInDown { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
- @keyframes fadeInUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
- @keyframes fadeIn { from{opacity:0} to{opacity:1} }
- .hero h1 {
- font-size: clamp(2.2rem, 4.5vw, 3.6rem);
- line-height: 1.15; font-weight: 900; color: #fff;
- margin-bottom: 22px;
- animation: fadeInUp .7s .1s ease both;
- }
- .hero h1 .highlight {
- color: #f5a623;
- text-shadow: 0 0 40px rgba(245,166,35,0.4);
- }
- .hero-sub {
- font-size: 1.08rem; color: #8faec8; line-height: 1.8;
- max-width: 620px; margin-bottom: 40px;
- animation: fadeInUp .7s .2s ease both;
- }
- .hero-sub strong { color: #c8dcea; }
- .hero-btns {
- display: flex; gap: 16px; flex-wrap: wrap;
- animation: fadeInUp .7s .3s ease both;
- }
- .btn-gold {
- background: linear-gradient(135deg,#f5a623,#e09510);
- color: #0a1628; padding: 15px 36px; border-radius: 5px;
- font-weight: 800; font-size: 1rem;
- box-shadow: 0 6px 24px rgba(245,166,35,0.4);
- transition: transform .15s, box-shadow .15s;
- display: inline-flex; align-items: center; gap: 8px;
- }
- .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(245,166,35,0.55); }
- .btn-outline {
- border: 2px solid rgba(255,255,255,0.35); color: #fff;
- padding: 15px 36px; border-radius: 5px;
- font-weight: 600; font-size: 1rem;
- transition: all .2s;
- display: inline-flex; align-items: center; gap: 8px;
- }
- .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
- .hero-trust {
- display: flex; align-items: center; gap: 20px; margin-top: 40px;
- animation: fadeIn .8s .5s ease both;
- }
- .trust-avatars { display: flex; }
- .trust-avatars span {
- width: 36px; height: 36px; border-radius: 50%;
- border: 2px solid #0a1628; background: linear-gradient(135deg,#f5a623,#0a6fb5);
- display: inline-flex; align-items: center; justify-content: center;
- font-size: 0.7rem; color: #fff; font-weight: 700;
- margin-left: -10px;
- }
- .trust-avatars span:first-child { margin-left: 0; }
- .trust-text { color: #8faec8; font-size: 0.85rem; line-height: 1.4; }
- .trust-text strong { color: #f5a623; }
- .hero-scroll {
- position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
- display: flex; flex-direction: column; align-items: center; gap: 8px;
- color: rgba(255,255,255,0.4); font-size: 0.75rem; letter-spacing: 1px;
- animation: fadeIn 1s 1s ease both;
- }
- .scroll-line {
- width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
- animation: scrollAnim 1.5s infinite;
- }
- @keyframes scrollAnim { 0%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform:scaleY(1);transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
-
- /* ===== DATA STRIP ===== */
- .data-strip {
- background: linear-gradient(90deg, #0a1628 0%, #0d2a52 50%, #0a1628 100%);
- border-top: 1px solid rgba(245,166,35,0.2);
- border-bottom: 1px solid rgba(245,166,35,0.2);
- }
- .data-strip-inner {
- display: flex; justify-content: center; flex-wrap: wrap;
- max-width: 1200px; margin: 0 auto;
- }
- .data-item {
- flex: 1; min-width: 150px; text-align: center;
- padding: 28px 16px;
- border-right: 1px solid rgba(255,255,255,0.07);
- position: relative; overflow: hidden;
- transition: background .3s;
- }
- .data-item:last-child { border-right: none; }
- .data-item:hover { background: rgba(245,166,35,0.05); }
- .data-num {
- font-size: 2rem; font-weight: 900; line-height: 1;
- background: linear-gradient(135deg,#f5a623,#ffd070);
- -webkit-background-clip: text; -webkit-text-fill-color: transparent;
- margin-bottom: 6px;
- }
- .data-label { font-size: 0.8rem; color: #6a8aaa; font-weight: 500; }
-
- /* ===== SECTION COMMON ===== */
- section { padding: 88px 5%; }
- .section-tag {
- display: inline-block; color: #f5a623; font-size: 0.78rem;
- font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
- margin-bottom: 12px;
- }
- .section-title { font-size: clamp(1.7rem, 3vw, 2.5rem); color: #0a1628; font-weight: 800; line-height: 1.2; margin-bottom: 14px; }
- .section-sub { color: #6a7f99; line-height: 1.75; max-width: 600px; }
- .section-header { text-align: center; margin-bottom: 60px; }
- .section-header .section-sub { margin: 0 auto; }
-
- /* ===== PRODUCTS ===== */
- #products { background: #f5f7fa; }
- .products-grid {
- display: grid;
- grid-template-columns: repeat(2, 1fr);
- gap: 24px; max-width: 900px; margin: 0 auto;
- justify-content: center;
- }
- .product-card {
- background: #fff; border-radius: 10px;
- overflow: hidden; position: relative;
- box-shadow: 0 2px 20px rgba(0,0,0,0.06);
- transition: transform .3s, box-shadow .3s;
- cursor: pointer;
- }
- .product-card:hover { transform: translateY(-8px); box-shadow: 0 16px 48px rgba(0,0,0,0.14); }
- .product-card:hover .product-img img { transform: scale(1.07); }
- .product-img { height: 200px; overflow: hidden; position: relative; }
- .product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
- .product-img-overlay {
- position: absolute; inset: 0;
- background: linear-gradient(to top, rgba(5,15,35,0.6) 0%, transparent 60%);
- }
- .product-badge {
- position: absolute; top: 12px; right: 12px;
- background: linear-gradient(135deg,#f5a623,#e09510);
- color: #0a1628; padding: 3px 10px; border-radius: 3px;
- font-size: 0.72rem; font-weight: 700;
- }
- .product-body { padding: 22px 22px 24px; }
- .product-body h3 { font-size: 1rem; color: #0a1628; font-weight: 700; margin-bottom: 8px; }
- .product-body p { font-size: 0.85rem; color: #6a7f99; line-height: 1.65; margin-bottom: 16px; }
- .product-meta {
- display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;
- }
- .meta-tag {
- background: #f0f4f8; color: #4a6080; padding: 4px 10px;
- border-radius: 3px; font-size: 0.75rem; font-weight: 600;
- }
- .meta-tag.gold { background: rgba(245,166,35,0.12); color: #b07500; }
- .product-cta {
- display: inline-flex; align-items: center; gap: 6px;
- color: #0a6fb5; font-size: 0.85rem; font-weight: 700;
- transition: gap .2s;
- }
- .product-card:hover .product-cta { gap: 10px; }
-
- /* ===== CNC SECTION ===== */
- #cnc {
- background: #0a1628;
- position: relative;
- overflow: hidden;
- }
- #cnc::before {
- content: '';
- position: absolute;
- top: -100px; left: -100px;
- width: 500px; height: 500px;
- background: radial-gradient(circle, rgba(245,166,35,0.05), transparent 70%);
- pointer-events: none;
- }
- .cnc-header {
- text-align: center;
- max-width: 800px;
- margin: 0 auto 56px;
- }
- .cnc-header .section-tag { display: block; margin-bottom: 16px; }
- .cnc-header h2 { color: #fff; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
- .cnc-header p { color: #7a9ab8; font-size: 1.05rem; line-height: 1.75; }
- .cnc-highlight {
- background: rgba(245,166,35,0.08);
- border: 1px solid rgba(245,166,35,0.2);
- border-radius: 12px;
- padding: 16px 24px;
- margin-top: 20px;
- display: inline-block;
- }
- .cnc-highlight span {
- color: #f5a623;
- font-weight: 700;
- font-size: 0.88rem;
- }
- /* Capabilities grid */
- .cnc-cap-grid {
- display: grid;
- grid-template-columns: repeat(3, 1fr);
- gap: 20px;
- max-width: 1100px;
- margin: 0 auto 48px;
- }
- .cnc-cap-card {
- background: rgba(255,255,255,0.04);
- border: 1px solid rgba(255,255,255,0.07);
- border-radius: 12px;
- padding: 24px 20px;
- text-align: center;
- transition: all .3s;
- }
- .cnc-cap-card:hover {
- background: rgba(245,166,35,0.08);
- border-color: rgba(245,166,35,0.25);
- transform: translateY(-4px);
- }
- .cnc-cap-icon { font-size: 2rem; margin-bottom: 12px; }
- .cnc-cap-title { font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
- .cnc-cap-desc { font-size: 0.8rem; color: #6a8aaa; line-height: 1.5; }
- /* Materials row */
- .cnc-materials-row {
- display: flex;
- justify-content: center;
- flex-wrap: wrap;
- gap: 12px;
- max-width: 900px;
- margin: 0 auto 32px;
- }
- .mat-chip {
- background: rgba(255,255,255,0.05);
- border: 1px solid rgba(255,255,255,0.1);
- color: #aac4e0;
- padding: 7px 18px;
- border-radius: 50px;
- font-size: 0.82rem;
- font-weight: 500;
- transition: all .2s;
- }
- .mat-chip:hover {
- background: rgba(245,166,35,0.12);
- border-color: rgba(245,166,35,0.3);
- color: #f5a623;
- }
- .cnc-divider {
- max-width: 200px;
- margin: 0 auto 32px;
- text-align: center;
- }
- .cnc-divider hr {
- border: none;
- border-top: 1px solid rgba(245,166,35,0.2);
- }
- /* Post-processing row */
- .cnc-post-label {
- text-align: center;
- font-size: 0.78rem;
- font-weight: 700;
- letter-spacing: 2px;
- text-transform: uppercase;
- color: rgba(245,166,35,0.7);
- margin-bottom: 16px;
- }
- .cnc-post-row {
- display: flex;
- justify-content: center;
- flex-wrap: wrap;
- gap: 12px;
- max-width: 900px;
- margin: 0 auto 40px;
- }
- .post-chip {
- background: rgba(10,111,181,0.15);
- border: 1px solid rgba(10,111,181,0.3);
- color: #60a5fa;
- padding: 7px 18px;
- border-radius: 50px;
- font-size: 0.82rem;
- font-weight: 600;
- transition: all .2s;
- }
- .post-chip:hover {
- background: rgba(10,111,181,0.25);
- border-color: rgba(10,111,181,0.5);
- }
- /* CNC CTA */
- .cnc-cta-row {
- text-align: center;
- margin-top: 12px;
- }
- .cnc-cta-row a {
- display: inline-flex;
- align-items: center;
- gap: 8px;
- background: linear-gradient(135deg,#f5a623,#e09510);
- color: #0a1628;
- padding: 14px 36px;
- border-radius: 8px;
- font-weight: 800;
- font-size: 1rem;
- box-shadow: 0 4px 20px rgba(245,166,35,0.4);
- transition: all .2s;
- text-decoration: none;
- }
- .cnc-cta-row a:hover {
- transform: translateY(-2px);
- box-shadow: 0 8px 30px rgba(245,166,35,0.55);
- }
- .cnc-note {
- text-align: center;
- color: #4a6a8a;
- font-size: 0.82rem;
- margin-top: 14px;
- }
-
- /* ===== FACTORY ADVANTAGE ===== */
- #factory {
- background: #0a1628;
- position: relative; overflow: hidden;
- }
- #factory::before {
- content: ''; position: absolute;
- top: -200px; right: -200px;
- width: 600px; height: 600px;
- background: radial-gradient(circle, rgba(245,166,35,0.06), transparent 70%);
- pointer-events: none;
- }
- .factory-wrap {
- display: grid; grid-template-columns: 1fr 1fr;
- gap: 64px; max-width: 1200px; margin: 0 auto;
- align-items: center;
- }
- .factory-img-wrap { position: relative; border-radius: 12px; overflow: hidden; }
- .factory-img-wrap img { width: 100%; border-radius: 12px; }
- .factory-img-overlay {
- position: absolute; inset: 0;
- background: linear-gradient(135deg, rgba(245,166,35,0.15), transparent);
- border-radius: 12px;
- }
- .factory-img-badge {
- position: absolute; bottom: -1px; left: -1px; right: -1px;
- background: linear-gradient(to top, rgba(5,15,35,0.95), transparent);
- padding: 32px 24px 20px;
- border-radius: 0 0 12px 12px;
- }
- .factory-img-badge p { color: #aac4e0; font-size: 0.88rem; }
- .factory-img-badge strong { color: #f5a623; font-size: 1.1rem; display: block; margin-bottom: 4px; }
- .factory-content .section-tag { display: block; }
- .factory-content .section-title { color: #fff; margin-bottom: 16px; }
- .factory-content .section-sub { color: #7a9ab8; margin-bottom: 40px; }
- .advantage-list { display: flex; flex-direction: column; gap: 20px; }
- .advantage-item {
- display: flex; gap: 18px; align-items: flex-start;
- padding: 20px; border-radius: 8px;
- background: rgba(255,255,255,0.04);
- border: 1px solid rgba(255,255,255,0.07);
- transition: background .3s, border-color .3s;
- }
- .advantage-item:hover { background: rgba(245,166,35,0.07); border-color: rgba(245,166,35,0.25); }
- .adv-icon {
- width: 44px; height: 44px; flex-shrink: 0;
- background: linear-gradient(135deg, rgba(245,166,35,0.2), rgba(245,166,35,0.05));
- border: 1px solid rgba(245,166,35,0.3);
- border-radius: 8px; display: flex; align-items: center; justify-content: center;
- font-size: 1.3rem;
- }
- .adv-text h4 { color: #fff; font-size: 0.95rem; font-weight: 700; margin-bottom: 5px; }
- .adv-text p { color: #6a8aaa; font-size: 0.83rem; line-height: 1.6; }
-
- /* ===== PROCESS ===== */
- #process { background: #f5f7fa; }
- .process-steps {
- display: grid; grid-template-columns: repeat(4, 1fr);
- gap: 0; max-width: 1100px; margin: 0 auto;
- position: relative;
- }
- .process-steps::before {
- content: ''; position: absolute;
- top: 36px; left: calc(12.5%); right: calc(12.5%);
- height: 2px;
- background: linear-gradient(90deg, #f5a623, #0a6fb5, #f5a623, #0a6fb5);
- z-index: 0;
- }
- .process-step { text-align: center; padding: 0 20px; position: relative; z-index: 1; }
- .step-num {
- width: 72px; height: 72px; border-radius: 50%;
- background: linear-gradient(135deg,#0a1628,#0d2a52);
- border: 3px solid #f5a623;
- display: flex; align-items: center; justify-content: center;
- margin: 0 auto 20px;
- font-size: 1.6rem;
- box-shadow: 0 4px 24px rgba(245,166,35,0.25);
- transition: transform .3s;
- }
- .process-step:hover .step-num { transform: scale(1.1); }
- .step-label {
- font-size: 0.72rem; color: #f5a623; font-weight: 700;
- letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;
- }
- .process-step h4 { font-size: 0.98rem; color: #0a1628; font-weight: 700; margin-bottom: 8px; }
- .process-step p { font-size: 0.82rem; color: #6a7f99; line-height: 1.6; }
-
- /* ===== CERTIFICATIONS ===== */
- #certs { background: #fff; }
- .certs-row {
- display: flex; justify-content: center; flex-wrap: wrap;
- gap: 20px; max-width: 900px; margin: 0 auto 56px;
- }
- .cert-card {
- background: #f5f7fa; border: 2px solid #e0e8f0;
- border-radius: 10px; padding: 24px 32px; text-align: center;
- min-width: 150px; transition: all .25s;
- }
- .cert-card:hover { border-color: #f5a623; transform: translateY(-4px); box-shadow: 0 8px 24px rgba(245,166,35,0.12); }
- .cert-card .cert-icon { font-size: 2.2rem; margin-bottom: 10px; }
- .cert-card strong { display: block; color: #0a1628; font-size: 1.05rem; margin-bottom: 3px; }
- .cert-card small { color: #8a9ab0; font-size: 0.78rem; }
-
- /* Markets */
- .markets-row {
- display: flex; justify-content: center; flex-wrap: wrap;
- gap: 14px; max-width: 800px; margin: 0 auto;
- }
- .market-pill {
- background: #fff; border: 1.5px solid #d0dce8;
- color: #0a1628; padding: 9px 20px; border-radius: 24px;
- font-size: 0.88rem; font-weight: 500;
- transition: all .2s;
- }
- .market-pill:hover { background: #0a1628; color: #fff; border-color: #0a1628; }
-
- /* ===== CONTACT ===== */
- #contact {
- background: linear-gradient(135deg, #061020 0%, #0a2040 100%);
- position: relative; overflow: hidden;
- }
- #contact::after {
- content: ''; position: absolute; top: 0; right: 0; bottom: 0;
- width: 45%; opacity: 0.04;
- background-image: repeating-linear-gradient(
- 0deg, transparent, transparent 20px,
- rgba(245,166,35,1) 20px, rgba(245,166,35,1) 21px),
- repeating-linear-gradient(90deg, transparent, transparent 20px,
- rgba(245,166,35,1) 20px, rgba(245,166,35,1) 21px);
- }
- #contact .section-header .section-title { color: #fff; }
- #contact .section-header .section-sub { color: #7a9ab8; }
- .contact-wrap {
- display: grid; grid-template-columns: 1fr 1.7fr;
- gap: 56px; max-width: 1100px; margin: 0 auto;
- position: relative; z-index: 1;
- }
- .contact-info-box { }
- .contact-info-box h3 {
- color: #f5a623; font-size: 1rem; font-weight: 700;
- letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px;
- }
- .ci-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 24px; }
- .ci-icon-wrap {
- width: 42px; height: 42px; flex-shrink: 0;
- background: rgba(245,166,35,0.12); border: 1px solid rgba(245,166,35,0.25);
- border-radius: 8px; display: flex; align-items: center; justify-content: center;
- font-size: 1.1rem;
- }
- .ci-txt strong { display: block; color: #fff; font-size: 0.88rem; margin-bottom: 3px; }
- .ci-txt span { color: #7a9ab8; font-size: 0.85rem; }
- .whatsapp-btn {
- display: inline-flex; align-items: center; gap: 10px;
- background: #25D366; color: #fff;
- padding: 12px 24px; border-radius: 6px;
- font-weight: 700; font-size: 0.9rem; margin-top: 8px;
- transition: transform .15s, box-shadow .15s;
- }
- .whatsapp-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.4); }
-
- /* Form */
- .form-box {
- background: #fff; border-radius: 12px; padding: 40px;
- box-shadow: 0 20px 60px rgba(0,0,0,0.3);
- }
- .form-box h3 { color: #0a1628; font-size: 1.15rem; font-weight: 800; margin-bottom: 6px; }
- .form-box p { color: #8a9ab0; font-size: 0.85rem; margin-bottom: 28px; }
- .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
- .form-group { margin-bottom: 16px; }
- .form-group label {
- display: block; font-size: 0.82rem; color: #4a6080;
- margin-bottom: 6px; font-weight: 600;
- }
- .form-group input,
- .form-group select,
- .form-group textarea {
- width: 100%; padding: 11px 14px;
- border: 1.5px solid #d8e2ee; border-radius: 6px;
- font-size: 0.9rem; color: #1a2332;
- background: #fafcff;
- transition: border-color .2s, box-shadow .2s;
- font-family: inherit;
- }
- .form-group input:focus,
- .form-group select:focus,
- .form-group textarea:focus {
- outline: none; border-color: #f5a623;
- box-shadow: 0 0 0 3px rgba(245,166,35,0.1);
- }
- .form-group textarea { height: 100px; resize: vertical; }
- .form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236a7f99' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
- .form-submit {
- width: 100%; padding: 15px;
- background: linear-gradient(135deg,#f5a623,#e09510);
- color: #0a1628; border: none; border-radius: 6px;
- font-size: 1rem; font-weight: 800; cursor: pointer;
- transition: transform .15s, box-shadow .15s;
- box-shadow: 0 4px 20px rgba(245,166,35,0.4);
- position: relative;
- }
- .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(245,166,35,0.55); }
- .form-submit:disabled { opacity: 0.7; cursor: not-allowed; transform: none !important; }
- .form-note { font-size: 0.77rem; color: #aab8c8; text-align: center; margin-top: 12px; }
-
- /* Form status messages */
- .form-success {
- display: none;
- text-align: center;
- padding: 40px 20px;
- }
- .form-success.show { display: block; }
- .form-success-icon {
- font-size: 3rem;
- margin-bottom: 16px;
- }
- .form-success h4 {
- color: #0a1628;
- font-size: 1.2rem;
- margin-bottom: 8px;
- }
- .form-success p {
- color: #6a7f99;
- font-size: 0.9rem;
- }
-
- /* ===== FLOATING BTN ===== */
- .float-btn {
- position: fixed; bottom: 32px; right: 32px; z-index: 999;
- background: linear-gradient(135deg,#f5a623,#e09510);
- color: #0a1628; padding: 14px 24px; border-radius: 50px;
- font-weight: 800; font-size: 0.9rem;
- box-shadow: 0 8px 30px rgba(245,166,35,0.5);
- display: flex; align-items: center; gap: 8px;
- cursor: pointer; border: none;
- animation: floatPulse 2s infinite;
- transition: transform .15s;
- }
- .float-btn:hover { transform: scale(1.05); }
- @keyframes floatPulse {
- 0%,100% { box-shadow: 0 8px 30px rgba(245,166,35,0.5); }
- 50% { box-shadow: 0 8px 40px rgba(245,166,35,0.75); }
- }
- .float-btn .float-arrow { transition: transform .2s; }
- .float-btn:hover .float-arrow { transform: translateY(3px); }
-
- /* ===== FOOTER ===== */
- footer {
- background: #030d1c;
- border-top: 1px solid rgba(245,166,35,0.15);
- }
- .footer-top {
- display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
- gap: 40px; max-width: 1200px; margin: 0 auto;
- padding: 56px 5% 40px;
- }
- .footer-brand .nav-logo { font-size: 1.2rem; margin-bottom: 14px; }
- .footer-brand p { color: #4a6a8a; font-size: 0.85rem; line-height: 1.7; margin-bottom: 20px; }
- .footer-social { display: flex; gap: 10px; }
- .social-icon {
- width: 34px; height: 34px; border-radius: 6px;
- background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
- display: flex; align-items: center; justify-content: center;
- font-size: 0.9rem; color: #6a8aaa;
- transition: all .2s;
- }
- .social-icon:hover { background: rgba(245,166,35,0.15); border-color: rgba(245,166,35,0.3); color: #f5a623; }
- .footer-col h5 { color: #fff; font-size: 0.88rem; font-weight: 700; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
- .footer-col ul { list-style: none; }
- .footer-col ul li { margin-bottom: 10px; }
- .footer-col ul li a { color: #4a6a8a; font-size: 0.84rem; transition: color .2s; }
- .footer-col ul li a:hover { color: #f5a623; }
- .footer-bottom {
- border-top: 1px solid rgba(255,255,255,0.05);
- padding: 20px 5%; text-align: center;
- color: #2a4060; font-size: 0.8rem;
- display: flex; justify-content: space-between; align-items: center;
- max-width: 1200px; margin: 0 auto;
- }
-
- /* ===== RESPONSIVE ===== */
- @media (max-width: 960px) {
- .products-grid { grid-template-columns: repeat(2, 1fr); }
- .factory-wrap { grid-template-columns: 1fr; gap: 40px; }
- .process-steps { grid-template-columns: repeat(2, 1fr); gap: 32px; }
- .process-steps::before { display: none; }
- .contact-wrap { grid-template-columns: 1fr; }
- .footer-top { grid-template-columns: 1fr 1fr; }
- }
- @media (max-width: 640px) {
- .nav-links { display: none; }
- .products-grid { grid-template-columns: 1fr; }
- .form-row { grid-template-columns: 1fr; }
- .process-steps { grid-template-columns: 1fr; }
- .data-item { min-width: 50%; }
- .float-btn span:not(.float-arrow) { display: none; }
- .float-btn { padding: 14px 18px; border-radius: 50%; }
- .footer-top { grid-template-columns: 1fr; }
- .footer-bottom { flex-direction: column; gap: 8px; }
- }
- 
-
-    /* ===== DROPDOWN ===== */
-    .nav-dropdown { position: relative; }
-    .nav-dropdown > a { cursor: pointer; }
-    .nav-dropdown-menu {
-      position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-      background: #fff; border-radius: 8px; padding: 8px 0;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.12); min-width: 180px;
-      opacity: 0; visibility: hidden; transition: all .2s;
-      margin-top: 8px; z-index: 100;
+  <style>
+    /* ============================================
+       CSS VARIABLES & RESET
+    ============================================ */
+    :root {
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #111111;
+      --bg-card: #161616;
+      --bg-card-hover: #1e1e1e;
+      --accent: #ff6a00;
+      --accent-dark: #cc5500;
+      --accent-light: #ff8533;
+      --accent2: #00b4d8;
+      --accent2-dark: #0090b0;
+      --text-primary: #f0f0f0;
+      --text-secondary: #a0a0a0;
+      --text-muted: #666666;
+      --border: #2a2a2a;
+      --border-light: #333333;
+      --shadow: 0 4px 24px rgba(0,0,0,0.5);
+      --radius: 8px;
+      --radius-lg: 16px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --max-width: 1280px;
+      --nav-height: 72px;
     }
-    .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; margin-top: 0; }
-    .nav-dropdown-menu a {
-      display: block; padding: 10px 20px; color: #333; font-size: 0.88rem;
-      transition: all .15s; white-space: nowrap;
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    .nav-dropdown-menu a:hover { background: #f8f4ee; color: #d47700; }
-    .nav-dropdown-menu a::after { display: none; }
-    /* ===== CURRENT PAGE ===== */
-    .nav-links a[aria-current="page"] { color: #d47700; }
-    .nav-links a[aria-current="page"]::after { transform: scaleX(1); }
-/* ===== MOBILE NAV ===== */
-.nav-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:38px;height:38px;cursor:pointer;background:none;border:none;padding:6px;border-radius:6px;margin-left:auto}
-.nav-hamburger span{display:block;width:22px;height:2px;background:#1a2a40;border-radius:2px;transition:all .3s}
-.nav-hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.nav-hamburger.active span:nth-child(2){opacity:0}
-.nav-hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.nav-mobile-overlay{display:none;position:fixed;inset:0;background:rgba(10,22,40,0.96);z-index:999;flex-direction:column;justify-content:center;align-items:center;gap:6px;opacity:0;transition:opacity .3s}
-.nav-mobile-overlay.open{display:flex;opacity:1}
-.nav-mobile-overlay a{color:#fff;font-size:1.2rem;font-weight:600;padding:12px 32px;text-align:center;transition:color .2s}
-.nav-mobile-overlay a:hover{color:#f5a623}
-.nav-mobile-overlay a.nav-mobile-cta{background:linear-gradient(135deg,#e89a25,#d47700);color:#fff!important;border-radius:8px;padding:14px 40px;font-weight:700;margin-top:8px}
-.nav-mobile-sub{color:rgba(255,255,255,0.5);font-size:0.9rem;padding:4px 32px;text-align:center}
-@media(max-width:640px){.nav-links{display:none!important}.nav-hamburger{display:flex!important}}
-</style>
 
- <!--
- ============================================================
-  EMAILJS 配置 — 请填写以下 3 个值
- ============================================================
-  1. 前往 https://www.emailjs.com 注册（免费）
-  2. 进入 Integration（集成）页面，复制你的 Public Key
-  3. 添加 Email Service（Gmail / QQ / 企业邮箱等）
-  4. 创建 Email Template（邮件模板），定义变量名
-  5. 把下面 3 个占位符替换成真实值：
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--nav-height);
+    }
 
-  YOUR_EMAILJS_USER_ID       → 用户ID（Public Key）
-  YOUR_EMAILJS_SERVICE_ID    → 服务ID
-  YOUR_EMAILJS_TEMPLATE_ID   → 模板ID
- ============================================================
- -->
- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
- <script>
- EMAILJS_CONFIG = {
- USER_ID: 'UouNxjgSuPfYHagbO',
- SERVICE_ID: 'service_o4246bl',
- TEMPLATE_ID: 'template_dgmi7ig'
- };
- </script>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+
+    input, textarea, select {
+      font-family: inherit;
+    }
+
+    /* ============================================
+       UTILITY CLASSES
+    ============================================ */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    /* ============================================
+       BUTTONS
+    ============================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: 2px solid var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255,106,0,0.35);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-primary);
+      border: 2px solid var(--border-light);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+    }
+
+    .btn-outline:hover {
+      background: var(--accent);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255,106,0,0.35);
+    }
+
+    .btn-lg {
+      padding: 18px 36px;
+      font-size: 15px;
+    }
+
+    .btn-sm {
+      padding: 10px 20px;
+      font-size: 13px;
+    }
+
+    /* ============================================
+       NAVIGATION
+    ============================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-height);
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      transition: all var(--transition);
+    }
+
+    .nav.scrolled {
+      background: rgba(10,10,10,0.97);
+      border-bottom-color: var(--accent);
+      box-shadow: 0 2px 20px rgba(255,106,0,0.1);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--text-primary);
+    }
+
+    .nav__logo-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .nav__logo span {
+      color: var(--accent);
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav__links a {
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      border-radius: 6px;
+      transition: all var(--transition);
+      position: relative;
+    }
+
+    .nav__links a:hover,
+    .nav__links a.active {
+      color: var(--text-primary);
+      background: rgba(255,106,0,0.08);
+    }
+
+    .nav__links a.active {
+      color: var(--accent);
+    }
+
+    .nav__cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav__mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 22px;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .nav__mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10,10,10,0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      flex-direction: column;
+      padding: 32px 24px;
+      gap: 8px;
+    }
+
+    .nav__mobile-menu.open {
+      display: flex;
+    }
+
+    .nav__mobile-menu a {
+      display: block;
+      padding: 16px 20px;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      border-radius: var(--radius);
+      border-bottom: 1px solid var(--border);
+      transition: all var(--transition);
+    }
+
+    .nav__mobile-menu a:hover,
+    .nav__mobile-menu a.active {
+      color: var(--accent);
+      background: rgba(255,106,0,0.06);
+    }
+
+    .nav__mobile-menu .btn {
+      margin-top: 24px;
+      justify-content: center;
+    }
+
+    /* ============================================
+       HERO SECTION
+    ============================================ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: var(--nav-height);
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.25;
+      filter: grayscale(60%);
+    }
+
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(10,10,10,0.92) 0%,
+        rgba(10,10,10,0.7) 50%,
+        rgba(10,10,10,0.5) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero__grid-lines {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,106,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,106,0,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      z-index: 1;
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(255,106,0,0.12);
+      border: 1px solid rgba(255,106,0,0.3);
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-light);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .hero__badge i {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero__title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(36px, 6vw, 68px);
+      font-weight: 900;
+      line-height: 1.08;
+      margin-bottom: 28px;
+      color: var(--text-primary);
+    }
+
+    .hero__title .highlight {
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero__subtitle {
+      font-size: clamp(15px, 2vw, 18px);
+      color: var(--text-secondary);
+      max-width: 620px;
+      line-height: 1.75;
+      margin-bottom: 40px;
+    }
+
+    .hero__stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .hero__stat {
+      text-align: left;
+    }
+
+    .hero__stat-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .hero__stat-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    /* ============================================
+       TRUST BAR
+    ============================================ */
+    .trust-bar {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+      overflow: hidden;
+    }
+
+    .trust-bar__track {
+      display: flex;
+      gap: 40px;
+      animation: scroll-track 30s linear infinite;
+      width: max-content;
+    }
+
+    .trust-bar__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+
+    .trust-bar__item i {
+      color: var(--accent);
+      font-size: 16px;
+    }
+
+    @keyframes scroll-track {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ============================================
+       PROCESS COMPARISON TABLE
+    ============================================ */
+    .comparison {
+      background: var(--bg-secondary);
+    }
+
+    .comparison__table-wrapper {
+      overflow-x: auto;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      margin-top: 48px;
+    }
+
+    .comparison__table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px;
+    }
+
+    .comparison__table thead {
+      background: var(--bg-card);
+    }
+
+    .comparison__table th {
+      padding: 18px 24px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border-bottom: 2px solid var(--border);
+    }
+
+    .comparison__table th:first-child {
+      color: var(--accent);
+    }
+
+    .comparison__table td {
+      padding: 18px 24px;
+      font-size: 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    .comparison__table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison__table tr:hover td {
+      background: rgba(255,106,0,0.04);
+    }
+
+    .comparison__table td:first-child {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .comparison__badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .comparison__badge--3dp {
+      background: rgba(0,180,216,0.15);
+      color: var(--accent2);
+    }
+
+    .comparison__badge--cnc {
+      background: rgba(255,106,0,0.15);
+      color: var(--accent);
+    }
+
+    .comparison__badge--hybrid {
+      background: linear-gradient(135deg, rgba(0,180,216,0.15), rgba(255,106,0,0.15));
+      color: var(--accent-light);
+    }
+
+    /* ============================================
+       HYBRID PROCESS FLOW
+    ============================================ */
+    .process-flow {
+      position: relative;
+    }
+
+    .process-flow__steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    .process-flow__steps::before {
+      content: '';
+      position: absolute;
+      top: 44px;
+      left: calc(10% + 8px);
+      right: calc(10% + 8px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      z-index: 0;
+    }
+
+    .process-step {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-step__icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 2px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 28px;
+      color: var(--accent);
+      transition: all var(--transition);
+    }
+
+    .process-step:hover .process-step__icon {
+      border-color: var(--accent);
+      background: rgba(255,106,0,0.1);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(255,106,0,0.2);
+    }
+
+    .process-step__num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .process-step__title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    .process-step__desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ============================================
+       SERVICES SECTION
+    ============================================ */
+    .services {
+      background: var(--bg-secondary);
+    }
+
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 60px;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+
+    .service-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,106,0,0.1);
+    }
+
+    .service-card__image {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      filter: grayscale(30%);
+      transition: filter var(--transition);
+    }
+
+    .service-card:hover .service-card__image {
+      filter: grayscale(0%);
+    }
+
+    .service-card__body {
+      padding: 32px;
+    }
+
+    .service-card__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    .service-card__tag--3dp {
+      background: rgba(0,180,216,0.12);
+      color: var(--accent2);
+    }
+
+    .service-card__tag--cnc {
+      background: rgba(255,106,0,0.12);
+      color: var(--accent);
+    }
+
+    .service-card__title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .service-card__desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .service-card__specs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .service-card__spec {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .service-card__spec i {
+      color: var(--accent);
+      width: 16px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .service-card__specs-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .service-card__chip {
+      padding: 4px 12px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    /* ============================================
+       HYBRID SOLUTIONS
+    ============================================ */
+    .hybrid-solutions {
+      background: var(--bg-primary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hybrid-solutions::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255,106,0,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hybrid-solutions::after {
+      content: '';
+      position: absolute;
+      bottom: -200px;
+      left: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0,180,216,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hybrid-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hybrid-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .hybrid-card:hover {
+      border-color: rgba(255,106,0,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+    }
+
+    .hybrid-card:hover::before {
+      opacity: 1;
+    }
+
+    .hybrid-card__num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 56px;
+      font-weight: 900;
+      color: rgba(255,106,0,0.1);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .hybrid-card__title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .hybrid-card__desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .hybrid-card__features {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .hybrid-card__feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .hybrid-card__feature i {
+      color: var(--accent);
+      font-size: 12px;
+    }
+
+    /* ============================================
+       CASE STUDIES
+    ============================================ */
+    .case-studies {
+      background: var(--bg-secondary);
+    }
+
+    .case-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+
+    .case-card:hover {
+      border-color: rgba(255,106,0,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+
+    .case-card__image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      filter: grayscale(20%);
+      transition: filter var(--transition);
+    }
+
+    .case-card:hover .case-card__image {
+      filter: grayscale(0%);
+    }
+
+    .case-card__body {
+      padding: 28px;
+    }
+
+    .case-card__industry {
+      display: inline-block;
+      padding: 3px 10px;
+      background: rgba(255,106,0,0.1);
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .case-card__title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .case-card__desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .case-card__metrics {
+      display: flex;
+      gap: 16px;
+    }
+
+    .case-card__metric {
+      flex: 1;
+      background: var(--bg-secondary);
+      border-radius: var(--radius);
+      padding: 12px;
+      text-align: center;
+    }
+
+    .case-card__metric-value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .case-card__metric-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ============================================
+       MATERIALS TABLE
+    ============================================ */
+    .materials-grid {
+      margin-top: 48px;
+    }
+
+    .mat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: all var(--transition);
+    }
+
+    .mat-card:hover {
+      border-color: rgba(255,106,0,0.3);
+      transform: translateY(-2px);
+    }
+
+    .mat-card__type {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .mat-card__name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .mat-card__process {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .mat-card__chip {
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .mat-card__chip--3dp {
+      background: rgba(0,180,216,0.12);
+      color: var(--accent2);
+    }
+
+    .mat-card__chip--cnc {
+      background: rgba(255,106,0,0.12);
+      color: var(--accent);
+    }
+
+    .mat-card__chip--both {
+      background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(255,106,0,0.1));
+      color: var(--accent-light);
+    }
+
+    .mat-card__app {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ============================================
+       UPLOAD CAD SECTION
+    ============================================ */
+    .upload-cadv2 {
+      background: var(--bg-secondary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .upload-cadv2__bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.05;
+    }
+
+    .upload-cadv2__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .upload-form {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .upload-form__dropzone {
+      border: 2px dashed var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 60px 40px;
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--transition);
+      margin-bottom: 40px;
+    }
+
+    .upload-form__dropzone:hover,
+    .upload-form__dropzone.drag-over {
+      border-color: var(--accent);
+      background: rgba(255,106,0,0.05);
+    }
+
+    .upload-form__dropzone-icon {
+      font-size: 48px;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .upload-form__dropzone h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .upload-form__dropzone p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .upload-form__dropzone input[type="file"] {
+      display: none;
+    }
+
+    .upload-form__row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .upload-form__field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .upload-form__field label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .upload-form__field input,
+    .upload-form__field select,
+    .upload-form__field textarea {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      color: var(--text-primary);
+      font-size: 14px;
+      transition: border-color var(--transition);
+      outline: none;
+    }
+
+    .upload-form__field input:focus,
+    .upload-form__field select:focus,
+    .upload-form__field textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .upload-form__field textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .upload-form__field select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+
+    .upload-form__checkboxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 32px;
+      padding: 16px;
+      background: var(--bg-secondary);
+      border-radius: var(--radius);
+    }
+
+    .upload-form__checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
+    .upload-form__checkbox-label input[type="checkbox"] {
+      accent-color: var(--accent);
+      width: 16px;
+      height: 16px;
+    }
+
+    .upload-form__trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .upload-form__trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .upload-form__trust-item i {
+      color: var(--accent);
+    }
+
+    .upload-form__success {
+      display: none;
+      text-align: center;
+      padding: 60px 40px;
+    }
+
+    .upload-form__success.show {
+      display: block;
+    }
+
+    .upload-form__success-icon {
+      font-size: 64px;
+      color: #22c55e;
+      margin-bottom: 20px;
+    }
+
+    .upload-form__success h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .upload-form__success p {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    /* ============================================
+       CTA SECTION
+    ============================================ */
+    .cta-section {
+      background: linear-gradient(135deg, rgba(255,106,0,0.08), rgba(0,180,216,0.08));
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 0;
+    }
+
+    .cta-section__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .cta-section__text {
+      max-width: 560px;
+    }
+
+    .cta-section__title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .cta-section__subtitle {
+      font-size: 16px;
+      color: var(--text-secondary);
+    }
+
+    .cta-section__actions {
+      display: flex;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ============================================
+       BLOG SECTION
+    ============================================ */
+    .blog-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+
+    .blog-card:hover {
+      border-color: rgba(255,106,0,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+
+    .blog-card__image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .blog-card__body {
+      padding: 24px;
+    }
+
+    .blog-card__tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .blog-card__title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .blog-card__excerpt {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       CONTACT
+    ============================================ */
+    .contact {
+      background: var(--bg-secondary);
+    }
+
+    .contact__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 60px;
+    }
+
+    .contact__info {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .contact__info-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .contact__info-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255,106,0,0.1);
+      border: 1px solid rgba(255,106,0,0.2);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .contact__info-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .contact__info-value {
+      font-size: 15px;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .contact__form {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+    }
+
+    .contact__form h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .contact__form-field {
+      margin-bottom: 20px;
+    }
+
+    .contact__form-field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .contact__form-field input,
+    .contact__form-field textarea {
+      width: 100%;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      color: var(--text-primary);
+      font-size: 14px;
+      font-family: inherit;
+      transition: border-color var(--transition);
+      outline: none;
+      resize: vertical;
+    }
+
+    .contact__form-field input:focus,
+    .contact__form-field textarea:focus {
+      border-color: var(--accent);
+    }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    .footer {
+      background: #050505;
+      border-top: 1px solid var(--border);
+      padding: 60px 0 24px;
+    }
+
+    .footer__top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .footer__brand-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 320px;
+    }
+
+    .footer__col-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+
+    .footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer__links a {
+      font-size: 14px;
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+
+    .footer__links a:hover {
+      color: var(--accent);
+    }
+
+    .footer__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ============================================
+       WHATSAPP FLOATING BUTTON
+    ============================================ */
+    .whatsapp-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 900;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 28px;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+
+    .whatsapp-fab:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37,211,102,0.55);
+    }
+
+    /* ============================================
+       BACK TO TOP
+    ============================================ */
+    .back-to-top {
+      position: fixed;
+      bottom: 100px;
+      right: 28px;
+      z-index: 899;
+      width: 44px;
+      height: 44px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 16px;
+      cursor: pointer;
+      transition: all var(--transition);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
+    @media (max-width: 1024px) {
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-flow__steps {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+
+      .process-flow__steps::before {
+        display: none;
+      }
+
+      .footer__top {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+
+      .cta-section__inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --nav-height: 60px;
+      }
+
+      .nav__links, .nav__cta {
+        display: none;
+      }
+
+      .nav__mobile-toggle {
+        display: block;
+      }
+
+      .hero__stats {
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+
+      .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .process-flow__steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .upload-form {
+        padding: 24px;
+      }
+
+      .upload-form__row {
+        grid-template-columns: 1fr;
+      }
+
+      .upload-form__trust {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .footer__top {
+        grid-template-columns: 1fr;
+      }
+
+      .footer__bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .cta-section__actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .cta-section__actions .btn {
+        justify-content: center;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .process-flow__steps {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ===== NAV ===== -->
-<nav>
-  <div class="nav-logo">
-    <div class="nav-logo-icon">⚙️</div>
-    SEN<span>Auto</span>
-  </div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <div class="nav-dropdown">
-      <a href="products-3d-printing.html">Products ▾</a>
-      <div class="nav-dropdown-menu">
-        <a href="products-3d-printing.html">3D Printing</a>
-        <a href="products-cnc.html">CNC Precision</a>
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">
+        <div class="nav__logo-icon"><i class="fa-solid fa-gears"></i></div>
+        Solid<span>Form</span>
+      </a>
+
+      <div class="nav__links">
+        <a href="#home" class="active">Home</a>
+        <a href="#services">Services</a>
+        <a href="#hybrid">Hybrid Solutions</a>
+        <a href="#cases">Case Studies</a>
+        <a href="#about">About</a>
+        <a href="#materials">Materials</a>
+        <a href="#upload">Upload CAD</a>
+        <a href="#contact">Contact</a>
       </div>
-    </div>
-    <a href="about.html">About Us</a>
-    <a href="factory.html">Factory</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html" class="nav-cta">Contact Us</a>
-  </div>
 
-  <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-
-
-
-
-<!-- ===== HERO ===== -->
-<section id="home" class="hero">
- <div class="hero-bg"></div>
- <div class="hero-overlay"></div>
- <div class="hero-content">
- <div class="hero-badge">PRECISION MANUFACTURER · CHINA</div>
- <h1>
- Precision Manufacturing<br>
- <span class="highlight">3D Printing & CNC Solutions</span>
- </h1>
- <p class="hero-sub">
- We specialize in <strong>industrial 3D printing</strong> and <strong>CNC precision machining</strong> services —
- factory direct, ISO certified, shipped to 50+ countries worldwide.
- </p>
- <div class="hero-btns">
- <a href="#contact" class="btn-gold">🚀 Request Free Quote <span>→</span></a>
- <a href="#products" class="btn-outline">📦 View Products</a>
- </div>
- <div class="hero-trust">
- <div class="trust-avatars">
- <span>US</span><span>DE</span><span>JP</span><span>IN</span><span>+</span>
- </div>
- <div class="trust-text">
- <strong>2,000+ satisfied clients</strong><br>
- across North America, Europe & Asia-Pacific
- </div>
- </div>
- </div>
- <div class="hero-scroll">
- <span>SCROLL</span>
- <div class="scroll-line"></div>
- </div>
-</section>
-
-<!-- ===== DATA STRIP ===== -->
-<div class="data-strip">
- <div class="data-strip-inner">
- <div class="data-item">
- <div class="data-num">15+</div>
- <div class="data-label">Years Experience</div>
- </div>
- <div class="data-item">
- <div class="data-num">2,000+</div>
- <div class="data-label">Satisfied Clients</div>
- </div>
- <div class="data-item">
- <div class="data-num">MOQ 1PCS</div>
- <div class="data-label">Low Minimum Order</div>
- </div>
- <div class="data-item">
- <div class="data-num">15 Days</div>
- <div class="data-label">Standard Lead Time</div>
- </div>
- <div class="data-item">
- <div class="data-num">50+</div>
- <div class="data-label">Countries Served</div>
- </div>
- </div>
-</div>
-
-<!-- ===== PRODUCTS ===== -->
-<section id="products">
-  <div class="section-header">
-    <div class="section-tag">Our Product Lines</div>
-    <h2 class="section-title">3D Printing & CNC Precision Solutions</h2>
-    <p class="section-sub">From rapid prototyping to mass production — engineered for speed, precision, and global delivery.</p>
-  </div>
-  <div class="products-grid">
-
-    <!-- 3D Printing Equipment -->
-    <div class="product-card" onclick="location.href='products-3d-printing.html'" style="cursor:pointer;">
-      <div class="product-img">
-        <a href="products-3d-printing.html"><img src="https://raw.githubusercontent.com/LQR900/xinfengauto/main/Image2/3d-printing-machine.jpg" alt="3D Printing Machine" loading="lazy" /></a>
-        <div class="product-img-overlay"></div>
-        <div class="product-badge">HOT</div>
+      <div class="nav__cta">
+        <a href="#upload" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-upload"></i> Get a Quote
+        </a>
       </div>
-      <div class="product-body">
-        <h3>3D Printing Equipment & Services</h3>
-        <p>Industrial FDM, SLA, and SLS 3D printing. Rapid prototyping, low-volume production, complex geometries. All materials supported.</p>
-        <div class="product-meta">
-          <span class="meta-tag gold">MOQ: 1PCS</span>
-          <span class="meta-tag">24h Fast Turnaround</span>
-          <span class="meta-tag">STL / STEP Accepted</span>
-        </div>
-        <a href="#contact" class="product-cta">Get Quote <span>→</span></a>
-      </div>
+
+      <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
 
-    <!-- CNC Precision Machining -->
-    <div class="product-card" onclick="location.href='products-cnc.html'" style="cursor:pointer;">
-      <div class="product-img">
-        <a href="products-cnc.html"><img src="https://raw.githubusercontent.com/LQR900/xinfengauto/main/Image2/cnc-milling-parts.jpg" alt="CNC Precision Machining" loading="lazy" /></a>
-        <div class="product-img-overlay"></div>
-        <div class="product-badge">PRECISION</div>
+    <!-- Mobile Menu -->
+    <div class="nav__mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#hybrid">Hybrid Solutions</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#about">About</a>
+      <a href="#materials">Materials</a>
+      <a href="#upload">Upload CAD</a>
+      <a href="#contact">Contact</a>
+      <a href="#upload" class="btn btn-primary">
+        <i class="fa-solid fa-upload"></i> Get a Quote
+      </a>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO SECTION
+  ============================================ -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=1920&q=80&auto=format&fit=crop"
+           alt="CNC machining workshop"
+           loading="eager" />
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__grid-lines"></div>
+
+    <div class="container hero__content">
+      <div class="hero__badge">
+        <i class="fa-solid fa-circle"></i>
+        Quote within 24h · No MOQ · NDA Available
       </div>
-      <div class="product-body">
-        <h3>CNC Precision Machining</h3>
-        <p>Custom CNC machined parts with 5-axis capability. Automation equipment parts, medical accessories, robot structures. Tolerances up to ±0.01mm.</p>
-        <div class="product-meta">
-          <span class="meta-tag gold">MOQ: 1PCS</span>
-          <span class="meta-tag">±0.01mm Tolerance</span>
-          <span class="meta-tag">OEM/ODM</span>
+
+      <h1 class="hero__title">
+        Complex Parts,<br>
+        <span class="highlight">One-Stop Solution.</span><br>
+        From 3D Prototype to<br>
+        CNC-Machined Production.
+      </h1>
+
+      <p class="hero__subtitle">
+        Hybrid manufacturing specialist combining <strong style="color:var(--accent2)">3D Printing</strong>
+        for rapid iteration with <strong style="color:var(--accent)">CNC Machining</strong> for tight tolerances.
+        Serving aerospace, automotive, medical & robotics industries across 15+ countries.
+      </p>
+
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="#upload" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-upload"></i> Upload Your CAD
+        </a>
+        <a href="#cases" class="btn btn-secondary btn-lg">
+          <i class="fa-solid fa-folder-open"></i> View Case Studies
+        </a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <div class="hero__stat-number">15+</div>
+          <div class="hero__stat-label">Countries Served</div>
         </div>
-        <a href="#cnc" class="product-cta">View Capabilities <span>→</span></a>
+        <div class="hero__stat">
+          <div class="hero__stat-number">±0.01</div>
+          <div class="hero__stat-label">Tolerance (mm)</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number">24h</div>
+          <div class="hero__stat-label">Prototype Response</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-number">0</div>
+          <div class="hero__stat-label">Mold Cost</div>
+        </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-</section>
-
-<!-- ===== ABOUT US ===== -->
-<section id="about">
-  <div class="section-header">
-    <div class="section-tag">Who We Are</div>
-    <h2 class="section-title">About Us</h2>
-    <p class="section-sub">A trusted manufacturer specializing in CNC precision machining and 3D printing services for global clients.</p>
-  </div>
-  <div class="about-content" style="max-width:900px;margin:0 auto;padding:0 5% 60px;">
-    <p style="font-size:1.05rem;line-height:1.9;color:#555;text-align:center;">
-      SEN Automation is a professional manufacturer based in China, focused on delivering high-quality CNC machined parts and 3D printing solutions. With years of industry experience, we serve clients across automation, medical, robotics, and automotive sectors worldwide. Our commitment to precision, fast turnaround, and competitive pricing has earned the trust of customers in over 30 countries.
-    </p>
-    <div style="display:flex;justify-content:center;gap:40px;margin-top:36px;flex-wrap:wrap;">
-      <div style="text-align:center;">
-        <div style="font-size:2rem;font-weight:800;color:#d47700;">15+</div>
-        <div style="font-size:0.85rem;color:#888;">Years Experience</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-size:2rem;font-weight:800;color:#d47700;">50+</div>
-        <div style="font-size:0.85rem;color:#888;">Countries Served</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-size:2rem;font-weight:800;color:#d47700;">200+</div>
-        <div style="font-size:0.85rem;color:#888;">Projects Completed</div>
-      </div>
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-bar__track">
+      <div class="trust-bar__item"><i class="fa-solid fa-sliders"></i> SLA · SLS · SLM 3D Printing</div>
+      <div class="trust-bar__item"><i class="fa-solid fa-cogs"></i> 3-Axis / 4-Axis / 5-Axis CNC</div>
+      <div class="trust-bar__item"><i class="fa-solid fa-shield-halved"></i> Direct Owner Communication</div>
+      <div class="trust-bar__item"><i class="fa-solid fa-lock"></i> NDA Protection Available</div>
+      <div class="trust-bar__item"><i class="fa-solid fa-truck-fast"></i> DDP / FOB / EXW Shipping</div>
+      <div class="trust-bar__item"><i class="fa-solid fa-check-double"></i> CMM Inspection Reports</div>
+      <div class="trust-bar__item"><i class="fa-solid fa-sliders"></i> SLA · SLS · SLM 3D Printing</div>
+      <div class="trust-bar__item"><i class="fa-solid fa-cogs"></i> 3-Axis / 4-Axis / 5-Axis CNC</div>
+      <div class="trust-bar__item"><i class="fa-solid fa-shield-halved"></i> Direct Owner Communication</div>
+      <div class="trust-bar__item"><i class="fa-solid fa-lock"></i> NDA Protection Available</div>
+      <div class="trust-bar__item"><i class="fa-solid fa-truck-fast"></i> DDP / FOB / EXW Shipping</div>
+      <div class="trust-bar__item"><i class="fa-solid fa-check-double"></i> CMM Inspection Reports</div>
     </div>
   </div>
-</section>
 
-<!-- ===== CNC PRECISION MACHINING ===== -->
+  <!-- ============================================
+       PROCESS COMPARISON
+  ============================================ -->
+  <section class="section comparison" id="services">
+    <div class="container">
+      <div class="section-label">Technology Selection</div>
+      <h2 class="section-title">Which Process Is Right<br>For Your Project?</h2>
+      <p class="section-subtitle">
+        Not sure whether to use 3D printing or CNC machining? Our hybrid approach lets you combine both for the best outcome.
+      </p>
 
-<section id="cnc">
-<div class="cnc-header">
- <div class="section-tag">CNC Precision Machining</div>
- <h2>CNC Precision Machining Services<br><span style="color:#f5a623;">Custom Parts · High Precision · Fast Delivery</span></h2>
- <p>We specialize in precision CNC machining for industrial automation, medical devices, robotics, and complex 5-axis components. Accepting custom OEM/ODM orders from worldwide buyers — from single prototypes to mass production.</p>
- <div class="cnc-highlight">
- <span>🔧 Send Your Drawings — Free Technical Review Within 24h &nbsp;|&nbsp; 📦 Small Batch & Mass Production Available &nbsp;|&nbsp; 🌎 Long-Term Export Orders Welcome</span>
- </div>
-</div>
+      <div class="comparison__table-wrapper">
+        <table class="comparison__table">
+          <thead>
+            <tr>
+              <th>Your Requirement</th>
+              <th>Recommended Process</th>
+              <th>Why</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Complex geometry / Internal cooling channels</td>
+              <td><span class="comparison__badge comparison__badge--3dp">3D Printing</span></td>
+              <td>No tool access limitations — can produce any internal geometry</td>
+            </tr>
+            <tr>
+              <td>High precision / Metal / Superior surface finish</td>
+              <td><span class="comparison__badge comparison__badge--cnc">CNC Machining</span></td>
+              <td>Tolerance up to ±0.01mm with Ra 0.8 surface finish achievable</td>
+            </tr>
+            <tr>
+              <td>Rapid prototype + Subsequent mass production</td>
+              <td><span class="comparison__badge comparison__badge--hybrid">Hybrid</span></td>
+              <td>3D print for validation → CNC for production, seamless iteration</td>
+            </tr>
+            <tr>
+              <td>Low-volume production (&lt;200 units)</td>
+              <td><span class="comparison__badge comparison__badge--hybrid">Hybrid</span></td>
+              <td>No mold tooling cost — ideal for small batches</td>
+            </tr>
+            <tr>
+              <td>Functional testing / Rapid design iteration</td>
+              <td><span class="comparison__badge comparison__badge--3dp">3D Printing</span></td>
+              <td>Same-day printing possible, iterate design in hours not weeks</td>
+            </tr>
+            <tr>
+              <td>Aerospace / Medical certified materials</td>
+              <td><span class="comparison__badge comparison__badge--cnc">CNC Machining</span></td>
+              <td>Full traceability, material certs (EN10204, AS9100 docs)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-<!-- Capabilities grid -->
-<div class="cnc-cap-grid">
- <div class="cnc-cap-card">
- <div class="cnc-cap-icon">🔩</div>
- <div class="cnc-cap-title">Automation Equipment Parts</div>
- <div class="cnc-cap-desc">Custom shafts, gears, brackets, housings, and precision mechanical components for automation machinery.</div>
- </div>
- <div class="cnc-cap-card">
- <div class="cnc-cap-icon">🏥</div>
- <div class="cnc-cap-title">Medical Precision Parts</div>
- <div class="cnc-cap-desc">ISO-certified workshop for medical device components with tight tolerances and biocompatible materials.</div>
- </div>
- <div class="cnc-cap-card">
- <div class="cnc-cap-icon">🦾</div>
- <div class="cnc-cap-title">Robot Structural Parts</div>
- <div class="cnc-cap-desc">Robot arms, end-effectors, joints, frames, and structural components for industrial and collaborative robots.</div>
- </div>
- <div class="cnc-cap-card">
- <div class="cnc-cap-icon">⚙️</div>
- <div class="cnc-cap-title">5-Axis Complex Parts</div>
- <div class="cnc-cap-desc">Complex geometry parts requiring 5-axis simultaneous machining. Tolerances up to ±0.01mm. Full CAD/CAM support.</div>
- </div>
- <div class="cnc-cap-card">
- <div class="cnc-cap-icon">🔄</div>
- <div class="cnc-cap-title">Turning-Milling Compound</div>
- <div class="cnc-cap-desc">Combined CNC lathe + milling center for parts requiring both cylindrical turning and complex milling in one setup.</div>
- </div>
- <div class="cnc-cap-card">
- <div class="cnc-cap-icon">📐</div>
- <div class="cnc-cap-title">Custom OEM / ODM Orders</div>
- <div class="cnc-cap-desc">Non-standard custom parts from drawings (PDF, DWG, STEP, IGES). Low MOQ. Prototype to high-volume production.</div>
- </div>
-</div>
+  <!-- ============================================
+       SERVICES CARDS
+  ============================================ -->
+  <section class="section services">
+    <div class="container">
+      <div class="section-label">Our Capabilities</div>
+      <h2 class="section-title">Two Core Processes,<br>One Manufacturing Partner</h2>
+      <p class="section-subtitle">
+        From concept to final part, we cover the full spectrum of advanced manufacturing.
+        Need both? See our <a href="#hybrid" style="color:var(--accent)">Hybrid Solutions →</a>
+      </p>
 
-<!-- Materials -->
-<div class="cnc-divider"><hr></div>
-<div class="cnc-post-label">Materials We Work With</div>
-<div class="cnc-materials-row">
- <span class="mat-chip">Aluminum Alloy (6061, 7075)</span>
- <span class="mat-chip">Stainless Steel (304, 316L)</span>
- <span class="mat-chip">Carbon Steel</span>
- <span class="mat-chip">Brass / Copper</span>
- <span class="mat-chip">Engineering Plastics (PEEK, Delrin, Nylon)</span>
- <span class="mat-chip">Titanium Alloy</span>
- <span class="mat-chip">Tool Steel</span>
- <span class="mat-chip">Cast Iron</span>
-</div>
+      <div class="services__grid">
+        <!-- 3D Printing Card -->
+        <div class="service-card">
+          <img class="service-card__image"
+               src="https://images.unsplash.com/photo-1631733118010-3d5f3d8e4a5e?w=800&q=80&auto=format&fit=crop"
+               alt="3D printing SLA machine in workshop"
+               loading="lazy" />
+          <div class="service-card__body">
+            <div class="service-card__tag service-card__tag--3dp">
+              <i class="fa-solid fa-cube"></i> 3D Printing
+            </div>
+            <h3 class="service-card__title">Additive Manufacturing</h3>
+            <p class="service-card__desc">
+              From rapid prototype to end-use parts. We select the optimal 3D printing
+              technology based on your material, accuracy, and surface finish requirements.
+            </p>
+            <div class="service-card__specs">
+              <div class="service-card__spec">
+                <i class="fa-solid fa-microchip"></i>
+                <span><strong>Technologies:</strong> SLA, SLS, SLM, MJ, DMLS</span>
+              </div>
+              <div class="service-card__spec">
+                <i class="fa-solid fa-ruler"></i>
+                <span><strong>Max Build Size:</strong> 600×600×600mm</span>
+              </div>
+              <div class="service-card__spec">
+                <i class="fa-solid fa-crosshairs"></i>
+                <span><strong>Min Wall Thickness:</strong> 0.3mm (material-dependent)</span>
+              </div>
+              <div class="service-card__spec">
+                <i class="fa-solid fa-clock"></i>
+                <span><strong>Lead Time:</strong> 1–5 business days</span>
+              </div>
+            </div>
+            <div class="service-card__specs-list">
+              <span class="service-card__chip">Photopolymer Resin</span>
+              <span class="service-card__chip">Nylon PA12</span>
+              <span class="service-card__chip">AlSi10Mg (Metal)</span>
+              <span class="service-card__chip">Ti6Al4V (Titanium)</span>
+              <span class="service-card__chip">SS 316L</span>
+              <span class="service-card__chip">ABS-like</span>
+            </div>
+          </div>
+        </div>
 
-<!-- Post-processing -->
-<div class="cnc-divider"><hr></div>
-<div class="cnc-post-label">Surface Treatment & Post-Processing</div>
-<div class="cnc-post-row">
- <span class="post-chip">Anodizing (Clear / Color)</span>
- <span class="post-chip">Hard Oxidation</span>
- <span class="post-chip">Sandblasting</span>
- <span class="post-chip">Electroplating (Nickel, Chrome, Zinc)</span>
- <span class="post-chip">Heat Treatment</span>
- <span class="post-chip">Black Oxide Coating</span>
- <span class="post-chip">Polishing</span>
- <span class="post-chip">Laser Marking</span>
- <span class="post-chip">Powder Coating</span>
-</div>
-
-<!-- CTA -->
-<div class="cnc-cta-row">
- <a href="#contact">📨 Send Your Drawings — Get a Free Quote →</a>
-</div>
-<div class="cnc-note">Accepted file formats: PDF, DWG, STEP, IGES, STL, SolidWorks, AutoCAD &nbsp;|&nbsp; We sign NDA for all projects</div>
-</section>
-
-<!-- ===== FACTORY ADVANTAGE ===== -->
-<section id="factory">
- <div class="factory-wrap">
- <div class="factory-img-wrap">
- <img src="https://raw.githubusercontent.com/LQR900/xinfengauto/main/Image2/hero-bg.jpg" alt="SEN Automation Factory" />
- <div class="factory-img-overlay"></div>
- <div class="factory-img-badge">
- <strong>Our Manufacturing Base</strong>
- <p>50,000m² production facility · 300+ skilled engineers · ISO 9001 certified</p>
- </div>
- </div>
- <div class="factory-content">
- <div class="section-tag">Factory Advantages</div>
- <h2 class="section-title" style="color:#fff;">Why Manufacturers<br>Choose SEN Automation</h2>
- <p class="section-sub">15 years of precision manufacturing experience, combined with a vertically integrated supply chain, gives us unmatched quality and speed.</p>
- <div class="advantage-list">
- <div class="advantage-item">
- <div class="adv-icon">🏭</div>
- <div class="adv-text">
- <h4>Factory Direct — Zero Middlemen</h4>
- <p>Buy direct from the manufacturer. No trading company markups. Full factory audit, NDA, and OEM/ODM support available.</p>
- </div>
- </div>
- <div class="advantage-item">
- <div class="adv-icon">🎯</div>
- <div class="adv-text">
- <h4>Full Custom Engineering</h4>
- <p>Every machine is engineered for your specific product, production speed, and floor layout. We don't sell off-the-shelf only.</p>
- </div>
- </div>
- <div class="advantage-item">
- <div class="adv-icon">✅</div>
- <div class="adv-text">
- <h4>CE · ISO 9001 · RoHS Certified</h4>
- <p>All machines comply with international safety and quality standards for smooth customs clearance in the US, EU, and beyond.</p>
- </div>
- </div>
- <div class="advantage-item">
- <div class="adv-icon">🌍</div>
- <div class="adv-text">
- <h4>Global Delivery & Support</h4>
- <p>In-house export team handles all documentation, crating, and freight. English-speaking engineers provide remote commissioning.</p>
- </div>
- </div>
- </div>
- </div>
- </div>
-</section>
-
-<!-- ===== PROCESS ===== -->
-<section id="process">
- <div class="section-header">
- <div class="section-tag">How We Work</div>
- <h2 class="section-title">
-
-  
- <div class="process-steps">
- <div class="process-step">
- <div class="step-num">📋</div>
- <div class="step-label">Step 01</div>
- <h4>Send Inquiry</h4>
- <p>Share your production requirements, product specs, and capacity needs via our form or WhatsApp.</p>
- </div>
- <div class="process-step">
- <div class="step-num">💡</div>
- <div class="step-label">Step 02</div>
- <h4>Free Consultation</h4>
- <p>Our engineers analyze your needs and provide a tailored solution proposal with pricing within 24 hours.</p>
- </div>
- <div class="process-step">
- <div class="step-num">⚙️</div>
- <div class="step-label">Step 03</div>
- <h4>Manufacturing</h4>
- <p>We build, test, and video-inspect your machine. You can visit our factory or request live video verification.</p>
- </div>
- <div class="process-step">
- <div class="step-num">🚢</div>
- <div class="step-label">Step 04</div>
- <h4>Delivery & Support</h4>
- <p>We handle shipping and customs docs. Our engineers assist with installation, commissioning, and operator training.</p>
- </div>
- </div>
-</section>
-
-<!-- ===== CERTIFICATIONS ===== -->
-<section id="certs">
- <div class="section-header">
- <div class="section-tag">Quality & Compliance</div>
- <h2 class="section-title">Internationally Certified</h2>
- <p class="section-sub">Our machines meet rigorous international standards — ensuring smooth import and full compliance in your target market.</p>
- </div>
- <div class="certs-row">
- <div class="cert-card">
- <div class="cert-icon">🇪🇺</div>
- <strong>CE</strong>
- <small>European Conformity</small>
- </div>
- <div class="cert-card">
- <div class="cert-icon">📋</div>
- <strong>ISO 9001</strong>
- <small>Quality Management</small>
- </div>
- <div class="cert-card">
- <div class="cert-icon">🛡️</div>
- <strong>RoHS</strong>
- <small>Hazardous Substances</small>
- </div>
- <div class="cert-card">
- <div class="cert-icon">🌿</div>
- <strong>ISO 14001</strong>
- <small>Environmental Mgmt</small>
- </div>
- <div class="cert-card">
- <div class="cert-icon">⚡</div>
- <strong>SGS</strong>
- <small>Third-Party Tested</small>
- </div>
- </div>
-
- <div class="section-header" style="margin-top:60px;margin-bottom:28px;">
- <div class="section-tag">Global Markets</div>
- <h2 class="section-title" style="font-size:1.5rem;">Clients in 50+ Countries</h2>
- </div>
- <div class="markets-row">
- <span class="market-pill">🇺🇸 United States</span>
- <span class="market-pill">🇨🇦 Canada</span>
- <span class="market-pill">🇩🇪 Germany</span>
- <span class="market-pill">🇬🇧 United Kingdom</span>
- <span class="market-pill">🇫🇷 France</span>
- <span class="market-pill">🇯🇵 Japan</span>
- <span class="market-pill">🇰🇷 South Korea</span>
- <span class="market-pill">🇮🇳 India</span>
- <span class="market-pill">🇸🇬 Southeast Asia</span>
- <span class="market-pill">🇦🇺 Australia</span>
- </div>
-</section>
-
-<!-- ===== BLOG ===== -->
-<section id="blog">
-  <div class="section-header">
-    <div class="section-tag">Insights</div>
-    <h2 class="section-title">Blog</h2>
-    <p class="section-sub">Industry insights, manufacturing tips, and company updates.</p>
-  </div>
-  <div class="blog-grid" style="max-width:1100px;margin:0 auto;padding:0 5% 60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
-    <a href="#contact" style="text-decoration:none;color:inherit;">
-      <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:transform .2s;">
-        <div style="height:160px;background:linear-gradient(135deg,#f8f9fa,#e9ecef);display:flex;align-items:center;justify-content:center;font-size:2.5rem;">📐</div>
-        <div style="padding:20px;">
-          <h3 style="font-size:1rem;margin-bottom:8px;color:#1a2a40;">CNC Machining Tolerances Guide</h3>
-          <p style="font-size:0.85rem;color:#888;line-height:1.6;">Understanding tolerances in precision machining — what matters most for your project.</p>
+        <!-- CNC Machining Card -->
+        <div class="service-card">
+          <img class="service-card__image"
+               src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&q=80&auto=format&fit=crop"
+               alt="5-axis CNC machining center"
+               loading="lazy" />
+          <div class="service-card__body">
+            <div class="service-card__tag service-card__tag--cnc">
+              <i class="fa-solid fa-cogs"></i> CNC Machining
+            </div>
+            <h3 class="service-card__title">Precision CNC Machining</h3>
+            <p class="service-card__desc">
+              3-axis to 5-axis CNC centers for complex parts requiring tight tolerances,
+              superior surface finish, and repeatability. Full DFM feedback provided.
+            </p>
+            <div class="service-card__specs">
+              <div class="service-card__spec">
+                <i class="fa-solid fa-microchip"></i>
+                <span><strong>Capabilities:</strong> 3-Axis, 4-Axis, 5-Axis CNC</span>
+              </div>
+              <div class="service-card__spec">
+                <i class="fa-solid fa-ruler"></i>
+                <span><strong>Max Part Size:</strong> 1500×800×600mm</span>
+              </div>
+              <div class="service-card__spec">
+                <i class="fa-solid fa-crosshairs"></i>
+                <span><strong>Tolerance:</strong> ±0.01mm achievable</span>
+              </div>
+              <div class="service-card__spec">
+                <i class="fa-solid fa-clock"></i>
+                <span><strong>Lead Time:</strong> 3–15 business days</span>
+              </div>
+            </div>
+            <div class="service-card__specs-list">
+              <span class="service-card__chip">Aluminum 6061/7075</span>
+              <span class="service-card__chip">Stainless Steel</span>
+              <span class="service-card__chip">Titanium Grade 5</span>
+              <span class="service-card__chip">ABS / PC</span>
+              <span class="service-card__chip">POM / Delrin</span>
+              <span class="service-card__chip">Nylon</span>
+            </div>
+          </div>
         </div>
       </div>
-    </a>
-    <a href="#contact" style="text-decoration:none;color:inherit;">
-      <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:transform .2s;">
-        <div style="height:160px;background:linear-gradient(135deg,#f8f9fa,#e9ecef);display:flex;align-items:center;justify-content:center;font-size:2.5rem;">🖨️</div>
-        <div style="padding:20px;">
-          <h3 style="font-size:1rem;margin-bottom:8px;color:#1a2a40;">3D Printing vs CNC: Which to Choose?</h3>
-          <p style="font-size:0.85rem;color:#888;line-height:1.6;">A practical comparison to help you pick the right manufacturing method for your needs.</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       HYBRID PROCESS FLOW
+  ============================================ -->
+  <section class="section process-flow">
+    <div class="container">
+      <div class="section-label">Our Process</div>
+      <h2 class="section-title">From Concept to Door<br>in 4 Steps</h2>
+      <p class="section-subtitle">
+        Upload your CAD file, receive a DFM review and quote within 24 hours,
+        and track your order through production to delivery.
+      </p>
+
+      <div class="process-flow__steps">
+        <div class="process-step">
+          <div class="process-step__icon"><i class="fa-solid fa-upload"></i></div>
+          <div class="process-step__num">Step 01</div>
+          <div class="process-step__title">Upload CAD</div>
+          <div class="process-step__desc">Upload STL, STEP, IGES files. Fill in requirements.</div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__icon"><i class="fa-solid fa-clipboard-check"></i></div>
+          <div class="process-step__num">Step 02</div>
+          <div class="process-step__title">DFM Review</div>
+          <div class="process-step__desc">Our engineers review your design and suggest improvements.</div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__icon"><i class="fa-solid fa-hammer"></i></div>
+          <div class="process-step__num">Step 03</div>
+          <div class="process-step__title">Production</div>
+          <div class="process-step__desc">3D print prototype → CNC production → quality inspection.</div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__icon"><i class="fa-solid fa-microscope"></i></div>
+          <div class="process-step__num">Step 04</div>
+          <div class="process-step__title">CMM Inspection</div>
+          <div class="process-step__desc">Every critical dimension measured with CMM. Report included.</div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <div class="process-step__num">Step 05</div>
+          <div class="process-step__title">Global Delivery</div>
+          <div class="process-step__desc">Secure packaging, tracked shipping to your door worldwide.</div>
         </div>
       </div>
-    </a>
-    <a href="#contact" style="text-decoration:none;color:inherit;">
-      <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:transform .2s;">
-        <div style="height:160px;background:linear-gradient(135deg,#f8f9fa,#e9ecef);display:flex;align-items:center;justify-content:center;font-size:2.5rem;">🌍</div>
-        <div style="padding:20px;">
-          <h3 style="font-size:1rem;margin-bottom:8px;color:#1a2a40;">Shipping from China: What You Need to Know</h3>
-          <p style="font-size:0.85rem;color:#888;line-height:1.6;">Tips on shipping methods, customs, and delivery timelines for international orders.</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       HYBRID SOLUTIONS
+  ============================================ -->
+  <section class="section hybrid-solutions" id="hybrid">
+    <div class="container">
+      <div class="section-label">Core Differentiator</div>
+      <h2 class="section-title">Hybrid Manufacturing Solutions</h2>
+      <p class="section-subtitle">
+        The real power: combining both technologies. We engineer the right sequence
+        for each project's unique requirements.
+      </p>
+
+      <div class="grid-3" style="margin-top:60px;">
+        <div class="hybrid-card">
+          <div class="hybrid-card__num">01</div>
+          <h3 class="hybrid-card__title">3D Print + CNC Finish</h3>
+          <p class="hybrid-card__desc">
+            Print complex internal geometries with 3D printing, then CNC-machine
+            precision surfaces and critical features in one setup.
+          </p>
+          <div class="hybrid-card__features">
+            <div class="hybrid-card__feature">
+              <i class="fa-solid fa-check"></i>
+              <span>Eliminates tool access limitations</span>
+            </div>
+            <div class="hybrid-card__feature">
+              <i class="fa-solid fa-check"></i>
+              <span>Same material from print to CNC</span>
+            </div>
+            <div class="hybrid-card__feature">
+              <i class="fa-solid fa-check"></i>
+              <span>Ideal for conformal cooling channels</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hybrid-card">
+          <div class="hybrid-card__num">02</div>
+          <h3 class="hybrid-card__title">Prototype → Mass Production</h3>
+          <p class="hybrid-card__desc">
+            Verify your design with 3D printed prototypes, iterate fast, then
+            transition to CNC-machined production parts — no new tooling required.
+          </p>
+          <div class="hybrid-card__features">
+            <div class="hybrid-card__feature">
+              <i class="fa-solid fa-check"></i>
+              <span>Zero mold tooling cost for low volumes</span>
+            </div>
+            <div class="hybrid-card__feature">
+              <i class="fa-solid fa-check"></i>
+              <span>Design validated before CNC production</span>
+            </div>
+            <div class="hybrid-card__feature">
+              <i class="fa-solid fa-check"></i>
+              <span>Scale from 1 to 1000+ units seamlessly</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hybrid-card">
+          <div class="hybrid-card__num">03</div>
+          <h3 class="hybrid-card__title">3D Printed Fixture + CNC</h3>
+          <p class="hybrid-card__desc">
+            Print custom jigs, fixtures, and gauge blocks at a fraction of
+            machined cost, then use them to improve CNC setup accuracy and speed.
+          </p>
+          <div class="hybrid-card__features">
+            <div class="hybrid-card__feature">
+              <i class="fa-solid fa-check"></i>
+              <span>Cut fixture costs by up to 80%</span>
+            </div>
+            <div class="hybrid-card__feature">
+              <i class="fa-solid fa-check"></i>
+              <span>Reduce CNC setup time significantly</span>
+            </div>
+            <div class="hybrid-card__feature">
+              <i class="fa-solid fa-check"></i>
+              <span>Custom geometries impossible to machine</span>
+            </div>
+          </div>
         </div>
       </div>
-    </a>
-  </div>
-</section>
+    </div>
+  </section>
 
-<!-- ===== CONTACT ===== -->
-<!-- ===== BLOG ===== -->
+  <!-- ============================================
+       CASE STUDIES
+  ============================================ -->
+  <section class="section case-studies" id="cases">
+    <div class="container">
+      <div class="section-label">Proven Results</div>
+      <h2 class="section-title">Case Studies</h2>
+      <p class="section-subtitle">
+        Real projects. Real results. See how hybrid manufacturing solves
+        real engineering challenges.
+      </p>
 
-<section id="contact">
- <div class="section-header">
- <div class="section-tag">Get In Touch</div>
- <h2 class="section-title">Request a Free Quote</h2>
- <p class="section-sub">Tell us your requirements and receive a customized solution with pricing within 24 hours. No obligation, no spam.</p>
- </div>
- <div class="contact-wrap">
- <div class="contact-info-box">
- <h3>Contact Us Directly</h3>
- <div class="ci-item">
- <div class="ci-icon-wrap">📧</div>
- <div class="ci-txt">
- <strong>Email</strong>
- <span>serasmith293@gmail.com</span>
- </div>
- </div>
- <div class="ci-item">
- <div class="ci-icon-wrap">💬</div>
- <div class="ci-txt">
- <strong>WhatsApp / WeChat</strong>
- <span>+86 15014602373</span>
- </div>
- </div>
- <div class="ci-item">
- <div class="ci-icon-wrap">🕐</div>
- <div class="ci-txt">
- <strong>Response Time</strong>
- <span>Within 24 hours · Mon–Sat</span>
- </div>
- </div>
- <div class="ci-item">
- <div class="ci-icon-wrap">🏭</div>
- <div class="ci-txt">
- <strong>Factory Location</strong>
- <span>Guangdong Province, China</span>
- </div>
- </div>
- <a href="https://wa.me/8615014602373" class="whatsapp-btn" target="_blank">
- 💬 Chat on WhatsApp Now
- </a>
- </div>
+      <div class="grid-3" style="margin-top:60px;">
+        <div class="case-card">
+          <img class="case-card__image"
+               src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80&auto=format&fit=crop"
+               alt="Titanium exhaust flange hybrid manufactured"
+               loading="lazy" />
+          <div class="case-card__body">
+            <span class="case-card__industry">Automotive</span>
+            <h3 class="case-card__title">Titanium Exhaust Flange — SLM + CNC Post-Machining</h3>
+            <p class="case-card__desc">
+              A US aftermarket exhaust brand needed 30 Ti-6Al-4V flanges with internal flow-optimized
+              geometry impossible to machine from solid. Printed via SLM, then 5-axis CNC finished
+              mounting surfaces and bolt holes to ±0.01mm tolerance.
+            </p>
+            <div class="case-card__metrics">
+              <div class="case-card__metric">
+                <div class="case-card__metric-value">-55%</div>
+                <div class="case-card__metric-label">Weight vs. Billet</div>
+              </div>
+              <div class="case-card__metric">
+                <div class="case-card__metric-value">12 days</div>
+                <div class="case-card__metric-label">Door to Door</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
- <!-- ============================================================ -->
- <!-- 询盘表单 — 使用 EmailJS 发送，勿删勿改结构 -->
- <!-- ============================================================ -->
- <div class="form-box" id="formBox">
- <h3>📋 Send Your Inquiry</h3>
- <p>Fill in your details and we'll get back to you with a tailored quote.</p>
+        <div class="case-card">
+          <img class="case-card__image"
+               src="https://images.unsplash.com/photo-1565439398536-851db0c8153c?w=600&q=80&auto=format&fit=crop"
+               alt="Robotic joint housing CNC machined"
+               loading="lazy" />
+          <div class="case-card__body">
+            <span class="case-card__industry">Robotics</span>
+            <h3 class="case-card__title">Aluminum Robotic Joint Housing — Sand Casting + CNC</h3>
+            <p class="case-card__desc">
+              German robotics company required 80 A356-T6 joint housings with complex internal
+              channels for cable routing. Sand-cast blanks produced in 5 days, then CNC-machined
+              bearing seats and mating faces to Ra 0.8 finish.
+            </p>
+            <div class="case-card__metrics">
+              <div class="case-card__metric">
+                <div class="case-card__metric-value">-70%</div>
+                <div class="case-card__metric-label">Cost vs. Low-Pressure Die</div>
+              </div>
+              <div class="case-card__metric">
+                <div class="case-card__metric-value">18 days</div>
+                <div class="case-card__metric-label">Total Lead Time</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
- <form id="inquiryForm">
- <div class="form-row">
- <div class="form-group">
- <label>Your Name *</label>
- <input type="text" name="name" placeholder="John Smith" required />
- </div>
- <div class="form-group">
- <label>Company Name *</label>
- <input type="text" name="company" placeholder="ABC Manufacturing" required />
- </div>
- </div>
- <div class="form-row">
- <div class="form-group">
- <label>Email Address *</label>
- <input type="email" name="email" placeholder="john@company.com" required />
- </div>
- <div class="form-group">
- <label>WhatsApp / Phone</label>
- <input type="text" name="whatsapp" placeholder="+1 234 567 8900" />
- </div>
- </div>
- <div class="form-row">
- <div class="form-group">
- <label>Country *</label>
- <select name="country" required>
- <option value="">-- Select Country --</option>
- <option>United States</option>
- <option>Canada</option>
- <option>Germany</option>
- <option>United Kingdom</option>
- <option>France</option>
- <option>Japan</option>
- <option>South Korea</option>
- <option>India</option>
- <option>Australia</option>
- <option>Southeast Asia</option>
- <option>Other</option>
- </select>
- </div>
- <div class="form-group">
- <label>Product Interest *</label>
- <select name="product" required>
- <option value="">-- Select Product --</option>
- <option>Packaging Automation Equipment</option>
- <option>Automatic Assembly Machine</option>
- <option>3C Dispensing Machine</option>
- <option>Lithium Battery Automation</option>
- <option>Custom Automation System</option>
- <option>Other / Not Sure</option>
- </select>
- </div>
- </div>
- <div class="form-group">
- <label>Quantity / Budget Range</label>
- <input type="text" name="quantity" placeholder="e.g. 2 units, budget ~$50,000" />
- </div>
- <div class="form-group">
- <label>Your Requirements *</label>
- <textarea name="message" placeholder="Please describe your production process, product dimensions, required output per hour, and any special requirements..." required></textarea>
- </div>
- <button type="submit" class="form-submit" id="submitBtn">🚀 Send Inquiry — Get Reply Within 24 Hours</button>
- <p class="form-note">🔒 Your information is kept strictly confidential. We never share your data.</p>
- </form>
+        <div class="case-card">
+          <img class="case-card__image"
+               src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80&auto=format&fit=crop"
+               alt="PEEK surgical guide for medical application"
+               loading="lazy" />
+          <div class="case-card__body">
+            <span class="case-card__industry">Medical</span>
+            <h3 class="case-card__title">Surgical Guide — SLA Prototype → PEEK CNC Production</h3>
+            <p class="case-card__desc">
+              Israeli med-tech startup needed 200 patient-specific surgical guides. SLA rapid
+              prototypes validated fit in week 1, then switched to PEEK CNC for biocompatible
+              production runs — zero tooling cost, full ISO 13485 traceability.
+            </p>
+            <div class="case-card__metrics">
+              <div class="case-card__metric">
+                <div class="case-card__metric-value">$0</div>
+                <div class="case-card__metric-label">Tooling Investment</div>
+              </div>
+              <div class="case-card__metric">
+                <div class="case-card__metric-value">14 days</div>
+                <div class="case-card__metric-label">Prototype → Delivery</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
- <!-- 发送成功后的提示（保持原有排版，不跳转页面）-->
- <div class="form-success" id="formSuccess">
- <div class="form-success-icon">✅</div>
- <h4>Inquiry Sent Successfully!</h4>
- <p>Thank you for your message. Our team will review your requirements and get back to you within <strong>24 hours</strong>.</p>
- <p style="margin-top:12px;">📧 A confirmation has been sent to your email address.</p>
- <button onclick="resetForm()" class="form-submit" style="margin-top:24px;">Send Another Inquiry</button>
- </div>
- </div>
- <!-- ============================================================ -->
+      <div style="text-align:center;margin-top:48px;">
+        <a href="#contact" class="btn btn-outline">
+          <i class="fa-solid fa-folder-open"></i> Discuss Your Project
+        </a>
+      </div>
+    </div>
+  </section>
 
- </div>
-</section>
+  <!-- ============================================
+       ABOUT US
+  ============================================ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">About Us</div>
+      <h2 class="section-title">Who You're Working With</h2>
 
-<!-- ===== FOOTER ===== -->
-<footer>
- <div class="footer-top">
- <div class="footer-brand">
- <div class="nav-logo" style="margin-bottom:16px;">
- <div class="nav-logo-icon">⚙️</div>
- SEN<span style="color:#f5a623;">Auto</span>
- </div>
- <p>Professional automation equipment manufacturer with 15 years of experience. Factory direct pricing, CE certified, serving clients in 50+ countries.</p>
- <div class="footer-social">
- <a href="#" class="social-icon">in</a>
- <a href="#" class="social-icon">🐦</a>
- <a href="#" class="social-icon">▶</a>
- <a href="#" class="social-icon">📧</a>
- </div>
- </div>
- <div class="footer-col">
- <h5>Products</h5>
- <ul>
- <li><a href="#contact">Packaging Automation</a></li>
- <li><a href="#contact">Assembly Machines</a></li>
- <li><a href="#contact">3C Dispensing</a></li>
- <li><a href="#contact">Battery Automation</a></li>
- <li><a href="#contact">Custom Systems</a></li>
- </ul>
- </div>
- <div class="footer-col">
- <h5>Company</h5>
- <ul>
- <li><a href="#factory">About Us</a></li>
- <li><a href="#certs">Certifications</a></li>
- <li><a href="#process">How We Work</a></li>
- <li><a href="#contact">After-Sales</a></li>
- <li><a href="#contact">Factory Tour</a></li>
- </ul>
- </div>
- <div class="footer-col">
- <h5>Contact</h5>
- <ul>
- <li><a href="mailto:serasmith293@gmail.com">serasmith293@gmail.com</a></li>
- <li><a href="#">WhatsApp: +86 15014602373</a></li>
- <li><a href="#">Guangdong, China</a></li>
- <li><a href="#contact">Get a Quote</a></li>
- <li><a href="#contact">Request Catalog</a></li>
- </ul>
- </div>
- </div>
- <div class="footer-bottom">
- <span>© 2026 SEN Automation Equipment Co., Ltd. All rights reserved.</span>
- <span>Factory Direct · CE Certified · 50+ Countries Served</span>
- </div>
-</footer>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:900px;margin:0 auto;">
 
-<!-- ===== FLOATING BUTTON ===== -->
-<a href="#contact" class="float-btn">
- <span>💬 Get Free Quote</span>
- <span class="float-arrow">↓</span>
-</a>
+        <!-- Left: Icon / Identity -->
+        <div style="text-align:center;">
+          <div style="width:120px;height:120px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:48px;color:#fff;">
+            <i class="fa-solid fa-user-gear"></i>
+          </div>
+          <h3 style="font-size:22px;font-weight:700;margin-bottom:4px;">Serafina Lin</h3>
+          <p style="color:var(--accent);font-size:15px;margin-bottom:12px;">Founder &amp; Operator</p>
+          <p style="color:var(--text-muted);font-size:14px;line-height:1.6;">
+            Solo engineer running SolidForm Manufacturing<br>
+            from Dongguan, China.
+          </p>
+        </div>
 
-<!-- ============================================================ -->
-<!-- EmailJS 发送脚本 — 表单提交逻辑 -->
-<!-- ============================================================ -->
-<script>
-(function() {
- // 初始化 EmailJS（请替换上方的 3 个配置值）
- emailjs.init(EMAILJS_CONFIG.USER_ID);
+        <!-- Right: Content -->
+        <div>
+          <div style="background:var(--bg-secondary);border-radius:16px;padding:32px;border-left:4px solid var(--accent);">
+            <p style="font-size:17px;line-height:1.8;color:var(--text-secondary);margin-bottom:20px;">
+              Most shops hand you an account manager. I hand you <strong style="color:var(--accent);">direct access to the person making your parts.</strong>
+            </p>
+            <ul style="list-style:none;padding:0;margin:0 0 20px;">
+              <li style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:15px;line-height:1.6;">
+                <i class="fa-solid fa-circle-check" style="color:var(--accent);margin-top:3px;flex-shrink:0;"></i>
+                <span><strong>You talk to me.</strong> From initial DFM review to final packaging — one point of contact, no handoffs.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:15px;line-height:1.6;">
+                <i class="fa-solid fa-circle-check" style="color:var(--accent);margin-top:3px;flex-shrink:0;"></i>
+                <span><strong>I quote personally.</strong> Every quote includes honest DFM feedback — no template responses.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:15px;line-height:1.6;">
+                <i class="fa-solid fa-circle-check" style="color:var(--accent);margin-top:3px;flex-shrink:0;"></i>
+                <span><strong>I QC every part.</strong> Each piece is inspected before it leaves — CMM reports available on request.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.6;">
+                <i class="fa-solid fa-circle-check" style="color:var(--accent);margin-top:3px;flex-shrink:0;"></i>
+                <span><strong>No MOQ, no pressure.</strong> Prototype or production run — one engineer, full attention.</span>
+              </li>
+            </ul>
+            <p style="font-size:14px;color:var(--text-muted);border-top:1px solid var(--border);padding-top:16px;margin:0;">
+              This is a sole proprietorship. When you reach out, you reach <strong>me</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
 
- const form = document.getElementById('inquiryForm');
- const submitBtn = document.getElementById('submitBtn');
- const formSuccess = document.getElementById('formSuccess');
- const formContent = form;
+      <div style="text-align:center;margin-top:40px;">
+        <a href="#upload" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Start a Conversation</a>
+      </div>
+    </div>
+  </section>
 
- form.addEventListener('submit', function(e) {
- e.preventDefault();
+  <!-- ============================================
+       MATERIALS
+  ============================================ -->
+  <section class="section" id="materials" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div class="section-label">Materials</div>
+      <h2 class="section-title">Supported Materials</h2>
+      <p class="section-subtitle">
+        From engineering plastics to aerospace-grade metals.
+        All materials available with full traceability and inspection certificates.
+      </p>
 
- // 禁用按钮，显示加载状态
- submitBtn.disabled = true;
- submitBtn.textContent = '⏳ Sending...';
+      <div class="grid-4 materials-grid">
+        <div class="mat-card">
+          <div class="mat-card__type">Metal</div>
+          <div class="mat-card__name">Aluminum 6061 / 7075</div>
+          <div class="mat-card__process">
+            <span class="mat-card__chip mat-card__chip--cnc">CNC</span>
+            <span class="mat-card__chip mat-card__chip--3dp">SLM</span>
+          </div>
+          <div class="mat-card__app">Structural parts, enclosures, brackets</div>
+        </div>
 
- // 收集表单数据
- const formData = {
- name: form.name.value,
- company: form.company.value,
- email: form.email.value,
- whatsapp: form.whatsapp.value,
- country: form.country.value,
- product: form.product.value,
- quantity: form.quantity.value,
- message: form.message.value
- };
+        <div class="mat-card">
+          <div class="mat-card__type">Metal</div>
+          <div class="mat-card__name">Stainless Steel 316L</div>
+          <div class="mat-card__process">
+            <span class="mat-card__chip mat-card__chip--cnc">CNC</span>
+            <span class="mat-card__chip mat-card__chip--3dp">DMLS</span>
+          </div>
+          <div class="mat-card__app">Medical, marine, chemical applications</div>
+        </div>
 
- // 通过 EmailJS 发送邮件
- emailjs.send(
- EMAILJS_CONFIG.SERVICE_ID,
- EMAILJS_CONFIG.TEMPLATE_ID,
- formData
- )
- .then(function() {
- // 发送成功：隐藏表单，显示成功提示
- formContent.style.display = 'none';
- formSuccess.classList.add('show');
- })
- .catch(function(error) {
- // 发送失败：恢复按钮，给出提示
- submitBtn.disabled = false;
- submitBtn.textContent = '🚀 Send Inquiry — Get Reply Within 24 Hours';
- alert('❌ Failed to send your inquiry. Please try again or email us directly at serasmith293@gmail.com');
- console.error('EmailJS Error:', error);
- });
- });
+        <div class="mat-card">
+          <div class="mat-card__type">Metal</div>
+          <div class="mat-card__name">Titanium Ti6Al4V</div>
+          <div class="mat-card__process">
+            <span class="mat-card__chip mat-card__chip--cnc">CNC</span>
+            <span class="mat-card__chip mat-card__chip--3dp">DMLS</span>
+          </div>
+          <div class="mat-card__app">Aerospace, medical implants, racing</div>
+        </div>
 
- // 重置表单（再次发送）
- window.resetForm = function() {
- form.reset();
- formContent.style.display = 'block';
- formSuccess.classList.remove('show');
- submitBtn.disabled = false;
- submitBtn.textContent = '🚀 Send Inquiry — Get Reply Within 24 Hours';
- };
-})();
-</script>
-<!-- ============================================================ -->
+        <div class="mat-card">
+          <div class="mat-card__type">Metal</div>
+          <div class="mat-card__name">AlSi10Mg (Aluminum)</div>
+          <div class="mat-card__process">
+            <span class="mat-card__chip mat-card__chip--3dp">SLM</span>
+          </div>
+          <div class="mat-card__app">Lightweight castings, heat sinks, manifolds</div>
+        </div>
 
+        <div class="mat-card">
+          <div class="mat-card__type">Plastic</div>
+          <div class="mat-card__name">ABS / PC (Machining)</div>
+          <div class="mat-card__process">
+            <span class="mat-card__chip mat-card__chip--cnc">CNC</span>
+          </div>
+          <div class="mat-card__app">Functional prototypes, housings, gears</div>
+        </div>
 
-<script>
-// Auto-highlight current page in nav
-(function() {
-  var path = window.location.pathname.split('/').pop() || 'index.html';
-  var nav = document.querySelector('nav');
-  if (!nav) return;
-  var links = nav.querySelectorAll('a[href]');
-  var found = false;
-  for (var i = 0; i < links.length; i++) {
-    var href = links[i].getAttribute('href').split('/').pop();
-    if (href === path) {
-      links[i].setAttribute('aria-current', 'page');
-      found = true;
-      break;
-    }
-  }
-  if (!found && (path === 'products-3d-printing.html' || path === 'products-cnc.html')) {
-    var trigger = nav.querySelector('.nav-dropdown > a');
-    if (trigger) trigger.setAttribute('aria-current', 'page');
-  }
-})();
-</script>
-<div class="nav-mobile-overlay" id="navMobileOverlay"><a href="index.html">Home</a><a href="products-3d-printing.html">3D Printing</a><a href="products-cnc.html">CNC Precision</a><a href="about.html">About Us</a><a href="factory.html">Factory</a><a href="blog.html">Blog</a><a href="contact.html" class="nav-mobile-cta">Contact Us</a></div><script>
-(function(){
-  var btn=document.querySelector('.nav-hamburger');
-  var overlay=document.querySelector('.nav-mobile-overlay');
-  if(!btn||!overlay)return;
-  btn.addEventListener('click',function(){
-    btn.classList.toggle('active');
-    var isOpen=btn.classList.contains('active');
-    overlay.classList.toggle('open',isOpen);
-    document.body.style.overflow=isOpen?'hidden':'';
-  });
-  overlay.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click',function(){
-      btn.classList.remove('active');
-      overlay.classList.remove('open');
-      document.body.style.overflow='';
+        <div class="mat-card">
+          <div class="mat-card__type">Plastic</div>
+          <div class="mat-card__name">Nylon PA12</div>
+          <div class="mat-card__process">
+            <span class="mat-card__chip mat-card__chip--3dp">SLS</span>
+          </div>
+          <div class="mat-card__app">Snap-fits, living hinges, functional parts</div>
+        </div>
+
+        <div class="mat-card">
+          <div class="mat-card__type">Resin</div>
+          <div class="mat-card__name">SLA Engineering Resin</div>
+          <div class="mat-card__process">
+            <span class="mat-card__chip mat-card__chip--3dp">SLA</span>
+          </div>
+          <div class="mat-card__app">High-detail prototypes, investment casting</div>
+        </div>
+
+        <div class="mat-card">
+          <div class="mat-card__type">Resin</div>
+          <div class="mat-card__name">Transparent / ABS-like Resin</div>
+          <div class="mat-card__process">
+            <span class="mat-card__chip mat-card__chip--3dp">SLA</span>
+          </div>
+          <div class="mat-card__app">Visual prototypes, light pipes, fluidics</div>
+        </div>
+
+        <div class="mat-card">
+          <div class="mat-card__type">Engineering Plastic</div>
+          <div class="mat-card__name">POM / Delrin</div>
+          <div class="mat-card__process">
+            <span class="mat-card__chip mat-card__chip--cnc">CNC</span>
+          </div>
+          <div class="mat-card__app">Gears, bearings, precision mechanical parts</div>
+        </div>
+
+        <div class="mat-card">
+          <div class="mat-card__type">Special</div>
+          <div class="mat-card__name">PEEK / Ultem 9085</div>
+          <div class="mat-card__process">
+            <span class="mat-card__chip mat-card__chip--cnc">CNC</span>
+            <span class="mat-card__chip mat-card__chip--3dp">SLS</span>
+          </div>
+          <div class="mat-card__app">High-temp aerospace, medical sterilization</div>
+        </div>
+
+        <div class="mat-card">
+          <div class="mat-card__type">Metal</div>
+          <div class="mat-card__name">Brass / Copper</div>
+          <div class="mat-card__process">
+            <span class="mat-card__chip mat-card__chip--cnc">CNC</span>
+          </div>
+          <div class="mat-card__app">Electrical connectors, fittings, decorative</div>
+        </div>
+
+        <div class="mat-card">
+          <div class="mat-card__type">Metal</div>
+          <div class="mat-card__name">Tool Steel H13 / D2</div>
+          <div class="mat-card__process">
+            <span class="mat-card__chip mat-card__chip--cnc">CNC</span>
+          </div>
+          <div class="mat-card__app">Molds, dies, cutting tools, fixtures</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       UPLOAD CAD SECTION
+  ============================================ -->
+  <section class="section upload-cadv2" id="upload">
+    <div class="upload-cadv2__bg">
+      <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?w=1920&q=80&auto=format&fit=crop"
+           alt="Workshop background" loading="lazy" />
+    </div>
+
+    <div class="container">
+      <div class="section-label">Get a Quote</div>
+      <h2 class="section-title">Upload Your CAD File</h2>
+      <p class="section-subtitle" style="margin-bottom:40px;">
+        Tell us about your project. Receive a detailed quote with DFM feedback within 24 hours.
+        All uploads are protected under NDA upon request.
+      </p>
+
+      <div class="upload-form" id="uploadForm">
+        <!-- Dropzone -->
+        <div class="upload-form__dropzone" id="dropzone">
+          <div class="upload-form__dropzone-icon">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+          </div>
+          <h3>Drag & drop your CAD file here</h3>
+          <p>or click to browse · Supported: .stl, .step, .stp, .iges, .igs · Max 50MB</p>
+          <input type="file" id="fileInput"
+                 accept=".stl,.step,.stp,.iges,.igs,.3mf,.obj"
+                 multiple />
+          <div id="fileList" style="margin-top:16px;display:flex;flex-direction:column;gap:8px;"></div>
+        </div>
+
+        <!-- Form -->
+        <form id="quoteForm" novalidate>
+          <div class="upload-form__row">
+            <div class="upload-form__field">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="John Smith" required />
+            </div>
+            <div class="upload-form__field">
+              <label for="company">Your Name *</label>
+              <input type="text" id="company" name="company" placeholder="Your Name" required />
+            </div>
+          </div>
+
+          <div class="upload-form__row">
+            <div class="upload-form__field">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="john@acme-industries.com" required />
+            </div>
+            <div class="upload-form__field">
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" />
+            </div>
+          </div>
+
+          <div class="upload-form__row">
+            <div class="upload-form__field">
+              <label for="process">Preferred Process *</label>
+              <select id="process" name="process" required>
+                <option value="">— Select Process —</option>
+                <option value="3d-printing">3D Printing Only</option>
+                <option value="cnc">CNC Machining Only</option>
+                <option value="hybrid">Hybrid (3D Print + CNC)</option>
+                <option value="not-sure">Not Sure – Recommend for Me</option>
+              </select>
+            </div>
+            <div class="upload-form__field">
+              <label for="quantity">Quantity *</label>
+              <select id="quantity" name="quantity" required>
+                <option value="">— Select Quantity —</option>
+                <option value="1-5">1–5 pcs</option>
+                <option value="6-20">6–20 pcs</option>
+                <option value="21-50">21–50 pcs</option>
+                <option value="51-200">51–200 pcs</option>
+                <option value="200+">200+ pcs</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="upload-form__row">
+            <div class="upload-form__field">
+              <label for="material">Material Preference</label>
+              <select id="material" name="material">
+                <option value="">— Select Material —</option>
+                <option value="aluminum">Aluminum (6061/7075)</option>
+                <option value="stainless">Stainless Steel (316L)</option>
+                <option value="titanium">Titanium (Ti6Al4V)</option>
+                <option value="abs-pc">ABS / PC</option>
+                <option value="nylon">Nylon / PA12</option>
+                <option value="resin">Engineering Resin</option>
+                <option value="pom">POM / Delrin</option>
+                <option value="other">Other (specify below)</option>
+              </select>
+            </div>
+            <div class="upload-form__field">
+              <label for="tolerance">Tolerance Requirement</label>
+              <select id="tolerance" name="tolerance">
+                <option value="">— Select Tolerance —</option>
+                <option value="standard">Standard (±0.1mm)</option>
+                <option value="precision">Precision (±0.05mm)</option>
+                <option value="high">High Precision (±0.01mm)</option>
+                <option value="ultra">Ultra (±0.01mm)</option>
+                <option value="any">Any is acceptable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="upload-form__field" style="margin-bottom:24px;">
+            <label for="message">Additional Requirements</label>
+            <textarea id="message" name="message"
+                      placeholder="Surface finish requirements, target lead time, special certifications needed, NDA required, etc."></textarea>
+          </div>
+
+          <div class="upload-form__checkboxes">
+            <label class="upload-form__checkbox-label">
+              <input type="checkbox" name="nda" />
+              <span>Request NDA protection for this project</span>
+            </label>
+            <label class="upload-form__checkbox-label">
+              <input type="checkbox" name="urgent" />
+              <span>Urgent request (Rush surcharge may apply)</span>
+            </label>
+            <label class="upload-form__checkbox-label">
+              <input type="checkbox" name="inspection" />
+              <span>Require CMM inspection report</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;" id="submitBtn">
+            <i class="fa-solid fa-paper-plane"></i>
+            Submit Quote Request
+          </button>
+
+          <div class="upload-form__trust">
+            <div class="upload-form__trust-item">
+              <i class="fa-solid fa-lock"></i>
+              SSL Encrypted
+            </div>
+            <div class="upload-form__trust-item">
+              <i class="fa-solid fa-file-contract"></i>
+              NDA Available on Request
+            </div>
+            <div class="upload-form__trust-item">
+              <i class="fa-solid fa-clock"></i>
+              Quote within 24 Hours
+            </div>
+            <div class="upload-form__trust-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              Data kept confidential
+            </div>
+          </div>
+        </form>
+
+        <!-- Success State -->
+        <div class="upload-form__success" id="formSuccess">
+          <div class="upload-form__success-icon">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h3>Quote Request Received!</h3>
+          <p>Thank you, we'll review your files and design requirements and get back to you within <strong>24 hours</strong>.<br>
+          A confirmation has been logged to the console. Check browser DevTools (F12) → Console.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BLOG / KNOWLEDGE SECTION
+  ============================================ -->
+  <section class="section" id="blog" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div class="section-label">Knowledge Hub</div>
+      <h2 class="section-title">Expert Insights</h2>
+      <p class="section-subtitle">
+        Practical guides to help you choose the right manufacturing process.
+      </p>
+
+      <div class="grid-3" style="margin-top:60px;">
+        <div class="blog-card">
+          <img class="blog-card__image"
+               src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80&auto=format&fit=crop"
+               alt="3D printing vs CNC machining comparison"
+               loading="lazy" />
+          <div class="blog-card__body">
+            <div class="blog-card__tag">Process Guide</div>
+            <h3 class="blog-card__title">3D Printing vs. CNC Machining: How to Choose the Right Process</h3>
+            <p class="blog-card__excerpt">
+              A practical decision framework covering geometry complexity, tolerance requirements,
+              material properties, and cost considerations for each technology.
+            </p>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img class="blog-card__image"
+               src="https://images.unsplash.com/photo-1504917595217-d4dc5ebb6122?w=600&q=80&auto=format&fit=crop"
+               alt="3D printed jig improving CNC efficiency"
+               loading="lazy" />
+          <div class="blog-card__body">
+            <div class="blog-card__tag">Hybrid Manufacturing</div>
+            <h3 class="blog-card__title">How 3D Printed Jigs Improve CNC Efficiency by 30%+</h3>
+            <p class="blog-card__excerpt">
+              Custom fixtures printed in hours vs. machined in days. See real examples of
+              how additive tooling accelerates CNC workflows and cuts costs.
+            </p>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img class="blog-card__image"
+               src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?w=600&q=80&auto=format&fit=crop"
+               alt="Small batch manufacturing cost comparison"
+               loading="lazy" />
+          <div class="blog-card__body">
+            <div class="blog-card__tag">Cost Strategy</div>
+            <h3 class="blog-card__title">Why Hybrid Manufacturing Wins for Low-Volume Production</h3>
+            <p class="blog-card__excerpt">
+              Injection molding has high upfront costs. Hybrid manufacturing eliminates
+              tooling entirely — making small batches economically viable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA SECTION
+  ============================================ -->
+  <section class="cta-section">
+    <div class="container cta-section__inner">
+      <div class="cta-section__text">
+        <div class="section-label">Ready to Start?</div>
+        <h2 class="cta-section__title">Complex Parts Need a Smarter Approach.</h2>
+        <p class="cta-section__subtitle">
+          Upload your CAD file today and get a professional DFM review + quote
+          from our manufacturing engineers — all within 24 hours.
+        </p>
+      </div>
+      <div class="cta-section__actions">
+        <a href="#upload" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-upload"></i> Upload CAD File
+        </a>
+        <a href="#contact" class="btn btn-secondary btn-lg">
+          <i class="fa-solid fa-envelope"></i> Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT
+  ============================================ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">
+        Questions about our capabilities, need a feasibility study,
+        or want to discuss a project? We're here to help.
+      </p>
+
+      <div class="contact__grid">
+        <div class="contact__info">
+          <div>
+            <div class="contact__info-item">
+              <div class="contact__info-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="contact__info-label">Email</div>
+                <div class="contact__info-value">serasmith293@gmail.com</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="contact__info-item">
+              <div class="contact__info-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <div class="contact__info-label">WhatsApp / Phone</div>
+                <div class="contact__info-value">+86 15014602373</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="contact__info-item">
+              <div class="contact__info-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="contact__info-label">Address</div>
+                <div class="contact__info-value">Dongguan, Guangdong, China</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="contact__info-item">
+              <div class="contact__info-icon">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div>
+                <div class="contact__info-label">Business Hours</div>
+                <div class="contact__info-value">Mon–Sat 09:00–18:00 CST<br>24/7 quote system online</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="contact__info-item">
+              <div class="contact__info-icon">
+                <i class="fa-solid fa-file-contract"></i>
+              </div>
+              <div>
+                <div class="contact__info-label">Legal</div>
+                <div class="contact__info-value">NDA available on request · Terms & Conditions · Privacy Policy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__form">
+          <h3>Send Us a Message</h3>
+          <form id="contactForm" novalidate>
+            <div class="contact__form-field">
+              <label for="cName">Name *</label>
+              <input type="text" id="cName" name="cName" placeholder="Your full name" required />
+            </div>
+            <div class="contact__form-field">
+              <label for="cEmail">Email *</label>
+              <input type="email" id="cEmail" name="cEmail" placeholder="your@email.com" required />
+            </div>
+            <div class="contact__form-field">
+              <label for="cSubject">Subject</label>
+              <input type="text" id="cSubject" name="cSubject" placeholder="Project inquiry / General question / ..." />
+            </div>
+            <div class="contact__form-field">
+              <label for="cMessage">Message *</label>
+              <textarea id="cMessage" name="cMessage" rows="5"
+                        placeholder="Tell us about your project, timeline, and requirements..."
+                        required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+  ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a href="#home" class="nav__logo" style="display:inline-flex;margin-bottom:0;">
+            <div class="nav__logo-icon"><i class="fa-solid fa-gears"></i></div>
+            Solid<span>Form</span>
+          </a>
+          <p class="footer__brand-desc">
+            CNC Machining &amp; 3D Printing Hybrid Services<br>
+            Operated by <strong>Serafina Lin</strong> | Dongguan, China<br>
+            <a href="mailto:serasmith293@gmail.com" style="color:var(--accent);text-decoration:none;"><i class="fa-solid fa-envelope"></i> serasmith293@gmail.com</a><br>
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp/WeChat: +86 15014602373<br>
+            <em>This is a sole proprietorship. You deal directly with the owner.</em>
+          </p>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Services</div>
+          <div class="footer__links">
+            <a href="#services">3D Printing</a>
+            <a href="#services">CNC Machining</a>
+            <a href="#hybrid">Hybrid Solutions</a>
+            <a href="#materials">Materials</a>
+            <a href="#upload">Upload CAD</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Resources</div>
+          <div class="footer__links">
+            <a href="#cases">Case Studies</a>
+            <a href="#blog">Knowledge Hub</a>
+            <a href="#upload">Get a Quote</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#contact">NDA Request</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Info</div>
+          <div class="footer__links">
+            <a href="#about">About Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 SolidForm Manufacturing. All rights reserved.</span>
+        <span>CNC Machining &amp; 3D Printing · Direct from Dongguan, China</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp FAB -->
+  <a href="https://wa.me/8615014602373" class="whatsapp-fab" id="whatsappFab"
+     target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- ============================================
+       JAVASCRIPT
+  ============================================ -->
+  <script>
+    /* ============================================
+       NAVIGATION
+    ============================================ */
+    const nav = document.getElementById('nav');
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navLinks = document.querySelectorAll('.nav__links a, .nav__mobile-menu a');
+
+    // Scroll shadow
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
     });
-  });
-  document.addEventListener('keydown',function(e){
-    if(e.key==='Escape'&&btn.classList.contains('active')){
-      btn.classList.remove('active');
-      overlay.classList.remove('open');
-      document.body.style.overflow='';
+
+    // Mobile menu toggle
+    mobileToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const icon = mobileToggle.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        mobileToggle.querySelector('i').classList.add('fa-bars');
+        mobileToggle.querySelector('i').classList.remove('fa-xmark');
+      });
+    });
+
+    // Active link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const observerOptions = { rootMargin: '-40% 0px -55% 0px' };
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + entry.target.id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => navObserver.observe(section));
+
+    /* ============================================
+       BACK TO TOP
+    ============================================ */
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 600);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ============================================
+       FILE UPLOAD (CAD)
+    ============================================ */
+    const dropzone = document.getElementById('dropzone');
+    const fileInput = document.getElementById('fileInput');
+    const fileList = document.getElementById('fileList');
+
+    dropzone.addEventListener('click', () => fileInput.click());
+
+    dropzone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropzone.classList.add('drag-over');
+    });
+
+    dropzone.addEventListener('dragleave', () => {
+      dropzone.classList.remove('drag-over');
+    });
+
+    dropzone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropzone.classList.remove('drag-over');
+      handleFiles(e.dataTransfer.files);
+    });
+
+    fileInput.addEventListener('change', () => {
+      handleFiles(fileInput.files);
+    });
+
+    function handleFiles(files) {
+      fileList.innerHTML = '';
+      Array.from(files).forEach(file => {
+        const div = document.createElement('div');
+        div.style.cssText = 'display:flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(255,106,0,0.08);border:1px solid rgba(255,106,0,0.2);border-radius:6px;font-size:13px;';
+        div.innerHTML = `<i class="fa-solid fa-file-code" style="color:var(--accent)"></i><span>${file.name}</span><span style="color:var(--text-muted);margin-left:auto;">${(file.size/1024/1024).toFixed(2)} MB</span>`;
+        fileList.appendChild(div);
+      });
     }
-  });
-})();
-</script>
+
+    /* ============================================
+       QUOTE FORM SUBMISSION
+    ============================================ */
+    const quoteForm = document.getElementById('quoteForm');
+    const formSuccess = document.getElementById('formSuccess');
+    const submitBtn = document.getElementById('submitBtn');
+
+    quoteForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Basic validation
+      const required = quoteForm.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = '#ef4444';
+          valid = false;
+        } else {
+          field.style.borderColor = '';
+        }
+      });
+
+      const emailField = document.getElementById('email');
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (emailField.value && !emailRegex.test(emailField.value)) {
+        emailField.style.borderColor = '#ef4444';
+        valid = false;
+      }
+
+      if (!valid) {
+        // Scroll to first error
+        const firstError = quoteForm.querySelector('[style*="border-color: rgb(239, 68, 68)"]');
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      // Collect form data
+      const formData = new FormData(quoteForm);
+      const files = fileInput.files;
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+      data.fileCount = files.length;
+      data.fileNames = Array.from(files).map(f => f.name);
+      data.submittedAt = new Date().toISOString();
+
+      // ==============================================
+      // PLACEHOLDER: Backend API endpoint
+      // ==============================================
+      // Replace this block with actual API call when backend is ready.
+      //
+      // const API_URL = 'https://api.yourdomain.com/v1/quote';
+      // const response = await fetch(API_URL, {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     'Authorization': 'Bearer YOUR_API_KEY'
+      //   },
+      //   body: JSON.stringify(data)
+      // });
+      // if (!response.ok) throw new Error('Submission failed');
+      // ==============================================
+
+      // Simulate submission
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+
+      await new Promise(resolve => setTimeout(resolve, 1200));
+
+      // Log to console (simulating backend receipt)
+      console.group('📋 Quote Submission Received');
+      console.log('Form Data:', JSON.stringify(data, null, 2));
+      console.log('Files:', Array.from(files).map(f => ({ name: f.name, size: f.size })));
+      console.log('Timestamp:', data.submittedAt);
+      console.groupEnd();
+      console.info('✅ Quote request received. Backend API integration pending.');
+
+      // Show success
+      quoteForm.style.display = 'none';
+      formSuccess.classList.add('show');
+      submitBtn.disabled = false;
+    });
+
+    // Remove error styling on input
+    quoteForm.querySelectorAll('input, select, textarea').forEach(field => {
+      field.addEventListener('input', () => { field.style.borderColor = ''; });
+    });
+
+    /* ============================================
+       CONTACT FORM
+    ============================================ */
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const required = contactForm.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = '#ef4444';
+          valid = false;
+        } else {
+          field.style.borderColor = '';
+        }
+      });
+
+      if (!valid) return;
+
+      const formData = new FormData(contactForm);
+      const data = {};
+      formData.forEach((value, key) => { data[key] = value; });
+      data.submittedAt = new Date().toISOString();
+
+      // ==============================================
+      // PLACEHOLDER: Contact Form API endpoint
+      // ==============================================
+      // const API_URL = 'https://api.yourdomain.com/v1/contact';
+      // await fetch(API_URL, {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(data)
+      // });
+      // ==============================================
+
+      console.group('✉️ Contact Form Submission');
+      console.log('Data:', JSON.stringify(data, null, 2));
+      console.info('✅ Contact message logged. Backend API integration pending.');
+      console.groupEnd();
+
+      contactForm.querySelector('button').disabled = true;
+      contactForm.querySelector('button').innerHTML =
+        '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      contactForm.innerHTML = `
+        <div style="text-align:center;padding:40px 0;">
+          <div style="font-size:48px;color:#22c55e;margin-bottom:16px;"><i class="fa-solid fa-circle-check"></i></div>
+          <h3 style="font-family:Montserrat,sans-serif;font-size:20px;font-weight:700;margin-bottom:8px;">Message Sent!</h3>
+          <p style="font-size:14px;color:var(--text-secondary);">We'll get back to you within 24 hours.</p>
+        </div>
+      `;
+    });
+
+    contactForm.querySelectorAll('input, textarea').forEach(field => {
+      field.addEventListener('input', () => { field.style.borderColor = ''; });
+    });
+
+    /* ============================================
+       SMOOTH SCROLL + SCROLL ANIMATIONS
+    ============================================ */
+    // Animate elements on scroll
+    const animateEls = document.querySelectorAll(
+      '.service-card, .hybrid-card, .case-card, .mat-card, .blog-card, .process-step'
+    );
+
+    const animateObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          animateObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animateEls.forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = `opacity 0.5s ease ${i * 0.08}s, transform 0.5s ease ${i * 0.08}s`;
+      animateObserver.observe(el);
+    });
+
+    /* ============================================
+       WHATSAPP FAB TOOLTIP
+    ============================================ */
+    const whatsappFab = document.getElementById('whatsappFab');
+    // Mobile: open in same tab
+    if (window.innerWidth <= 768) {
+      whatsappFab.style.bottom = '20px';
+      whatsappFab.style.right = '20px';
+    }
+  </script>
 </body>
 </html>
